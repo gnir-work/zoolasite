@@ -1,0 +1,33 @@
+{
+  "name": "zoola_site",
+  "description": "Zoola hair salon",
+  "main": "server.js",
+  "authors": [
+    "nir geller"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "hair",
+    "salon",
+    "haircut",
+    "curly",
+    "straight"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "parallax.js": "^1.4.2",
+    "device.js": "readmore.js#^0.0.2",
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8"
+  }
+}

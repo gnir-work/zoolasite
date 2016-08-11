@@ -1,0 +1,416 @@
+html,body{
+    width: 100%;
+    height: 150%;
+}
+
+
+bold{
+    font-size: 1.1em;
+}
+/*Carousel*/
+
+#myCarousel, #myCarousel .carousel-inner , #myCarousel .item, #myCarousel img{
+    height: 85vh;
+    width: 99.1vw;
+}
+
+/*Carousel media icons*/
+.carousel-caption {
+    padding-left: 10px;
+}
+
+.center-media{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+
+.fa-facebook:hover{
+    color:darkblue;
+    cursor: pointer;
+}
+
+.fa-instagram{
+    color:#fff;
+}
+
+.fa-instagram:hover{
+    color: purple;
+    cursor: pointer;
+
+}
+
+.fa-yelp{
+    color:red;
+}
+
+.fa-yelp:hover{
+    color: darkred;
+    cursor: pointer;
+}
+
+/*End Carousel*/
+
+/*NavBar*/
+.navbar-fixed-top {
+    background-color: rgba(0,0,0,0.55);
+    background-image: none;
+    border: 0;
+    padding-left: 25px;
+    padding-right: 2vw;
+}
+
+.logo{
+    color:white;
+    font-size: 1.7em;
+    font-family: 'Yellowtail', cursive;
+}
+
+.nav li a{
+    color:white !important;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.subscribe{
+    color:red !important;
+}
+
+/*About*/
+#about-image-container{
+    text-align: center;
+
+}
+
+#about-image{
+    width: 32vw;
+    height: 32vw;
+    min-width: 350px;
+    min-height: 350px;
+    border-radius: 50%;
+}
+
+#about-container{
+    margin-top: 12vh;
+    margin-bottom: 15vh;
+}
+
+
+#about{
+    padding-left: 5vw;
+}
+
+#about h1{
+    color: darkred;
+    font-weight: 600;
+}
+
+#about p{
+    font-size: 1.3em;
+}
+
+/*Parallax*/
+.parallax-window{
+    margin:0;
+    height: 22.5vw;
+    background: transparent;
+}
+
+/*Section header*/
+.section-header{
+    width: 30vw;
+    margin: auto;
+    text-align: center;
+    color:darkred;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+hr {
+    border: none;
+    height: 1px;
+    width: 100%;
+    /* Set the hr color */
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+}
+
+/*Meet the Team*/
+.team-container{
+    margin-top: 0;
+    margin-bottom: 5vh;
+    padding-top: 3vh;
+}
+
+
+.team-content{
+    margin-top: 2vw;
+
+}
+
+.worker-profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.worker-profile img{
+    border-radius: 80%;
+    width: 20vw;
+    height: 20vw;
+    min-width: 300px;
+    min-height: 300px;
+}
+
+.worker-profile h2{
+    text-align: center;
+    color: #000;
+}
+
+.worker-profile p{
+    margin: auto;
+    width: 80%;
+    font-size: 1.1em;
+}
+
+/*Praise*/
+.praise-container{
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.praise-content{
+    height: 55vh;
+}
+
+.praise-text{
+    height: 100%;
+    background-image: url('../images/blackHair.jpeg');
+    border-radius: 10%;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: white;
+    font-size: 1.3em;
+    font-family: 'Lobster', cursive;
+}
+
+.signature{
+    margin-bottom: 10px;
+}
+
+.scissor-connection{
+    color: #000;
+}
+
+
+/*Contact*/
+.contact-container{
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    height: 75vh;
+}
+
+.contact-header {
+    color: #AB0000;
+    margin-top: 0px;
+    width: 90%;
+}
+
+#map {
+    height: 75vh;
+    margin-top: 25px;
+}
+
+
+.contact-text{
+    font-size: 1.15em;
+    text-align: left;
+}
+
+.important{
+    font-size: 1.2em;
+    color: #D75813;
+}
+
+/*Subscribe*/
+.subscribe-header{
+    margin-top:25px;
+    width: 90%;
+
+}
+
+.fa-phone{
+    margin-right: 4px;
+}
+
+
+
+.subscribe-submit{
+    padding-top: 15px;
+    text-align: center;
+}
+
+
+/*Footer*/
+.footer-container{
+    padding-left: 8vh;
+    padding-right: 8vh;
+    background: #1C1F24;
+    color:whitesmoke;
+    font-size: 1.4em;
+}
+
+/*Phone compatibility*/
+
+@media (max-width: 1320px) {
+    .last-dot{
+        color:white;
+    }
+
+    #map{
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 1360px) {
+    .footer-container{
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .scissor-connection{
+        color:white;
+        display: none;
+    }
+
+    .praise-container{
+        text-align: center;
+    }
+
+    .praise-row{
+        height: 120vh;
+
+    }
+
+    .praise-text{
+        margin: auto;
+        margin-bottom: 25px;
+        width: 50vw;
+    }
+
+    #map{
+        margin-top: 50px;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .contact-text{
+        width: 80vw;
+        margin: auto;
+    }
+
+    #map{
+        margin:0;
+    }
+
+    .section-header{
+        width: 70%;
+    }
+
+    .subscribe-email{
+        margin-bottom: 15px ;
+    }
+}
+
+@media (max-width: 780px) {
+    /*Carousel*/
+    #myCarousel, #myCarousel .carousel-inner , #myCarousel .item, #myCarousel img{
+        height: 65vh;
+    }
+
+    /*Meet the team*/
+    .worker-profile img{
+        min-width: 250px;
+        min-height: 250px;
+    }
+
+    /*Praise*/
+    .praise-text{
+        width: 60vw;
+        font-size: 1.2em;
+    }
+
+    /*Contact*/
+    .contact-container, #map{
+        margin-top: 15px;
+    }
+
+    #map{
+        height: 50vh;
+    }
+
+    #fullName{
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 530px) {
+    .praise-text{
+        font-size: 1.1em;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    /*Carousel*/
+    #myCarousel, #myCarousel .carousel-inner , #myCarousel .item, #myCarousel img{
+        height: 47.5vh;
+    }
+
+    /*About*/
+    #about-container{
+        margin-top: 5vh;
+        margin-bottom: 5vw;
+    }
+
+    #about-image{
+        min-width: 250px;
+        min-height: 250px;
+        margin:auto;
+    }
+
+
+
+    .section-header h1{
+        font-size: 1.8em;
+    }
+
+    /*Parallax*/
+    .parallax-window{
+        display: none;
+    }
+
+    /*Team*/
+    .team-container, #about-container{
+        margin-bottom: 0px;
+    }
+    .praise-content{
+        max-height: 55vh;
+        width:85vw;
+        margin: auto;
+    }
+
+    .praise-text{
+        width: 85vw;
+        border-radius: 22.5%;
+        font-size: 1.1em;
+        margin-bottom: 20px;
+    }
+
+    .contact-header{
+        width: 100%;
+    }
+
+}
