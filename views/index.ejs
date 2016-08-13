@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="zoolaApp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
     <title>Zoola Salon</title>
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="css/main.css" rel="stylesheet" />
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Lobster|Yellowtail' rel='stylesheet' type='text/css'>
+    <link href="css/shell.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Ewert|Lobster|Yellowtail' rel='stylesheet' type='text/css'>
     <!-- bower:css -->
     <!-- endbower -->
+    <!--angular-->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/ngmap/build/scripts/ng-map.js"></script>
+    <script src="bower_components/ng-simple-parallax/js/ngParallax.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="main/main.module.js"></script>
+    <script src="main/main.controller.js"></script>
+    <script src="main/main.component.js"></script>
+    <script src="gallery/gallery.module.js"></script>
+    <script src="gallery/gallery.controller.js"></script>
+    <script src="gallery/gallery.component.js"></script>
 </head>
 <body>
     <header>
@@ -25,6 +38,7 @@
                 <div class="item active">
                     <img src="images/blackHair.jpeg" alt="Chania">
                     <div class="carousel-caption">
+                        <h1>Find us on</h1>
                         <p>
                             <a target="_blank" href="https://www.facebook.com/Gil-zoola-hair-salon-355017957858052/?fref=ts"><i class="fa fa-facebook fa-4x"></i></a>
                             <a target="_blank" href="https://www.instagram.com/gilzoola/?hl=en"><i class="fa fa-instagram fa-3x center-media"> </i></a>
@@ -36,6 +50,8 @@
                 <div class="item">
                     <img src="images/blondHair.jpg" alt="Chania">
                     <div class="carousel-caption">
+                        <h1>Find us on</h1>
+
                         <p>
                             <a target="_blank" href="https://www.facebook.com/Gil-zoola-hair-salon-355017957858052/?fref=ts"><i class="fa fa-facebook fa-4x"></i></a>
                             <a target="_blank" href="https://www.instagram.com/gilzoola/?hl=en"><i class="fa fa-instagram fa-3x center-media"> </i></a>
@@ -63,239 +79,37 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right ">
-                        <li><a href="#" class="team-link" >The Team</a></li>
-                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#!/main?scroll=.team-container">The Team</a></li>
+                        <li><a href="#!/gallery">Gallery</a></li>
                         <li><a href="#">Prices</a></li>
-                        <li><a href="#contact" class="contact-link">Contact Us</a></li>
-                        <li ><a href="#subscribe" class="contact-link"><span class="subscribe"> Subscribe now!</span></a></li>
+                        <li><a href="#!/main?scroll=.contact-container" ng-click="scrollTo('.contact-content')" class="contact-link">Contact Us</a></li>
+                        <li ><a href="#!/main?scroll=.contact-container"><span class="subscribe"> Subscribe now!</span></a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!--About-->
-    <div class="container-fluid " id="about-container">
-        <div class="row">
-            <div class='col-lg-4 col-lg-offset-1 ' id="about-image-container">
-                <img  id="about-image" src="images/test.jpeg" alt="banner">
-            </div>
-            <div id="about" class="col-lg-6">
-                <h1>
-                    A little about us
-                </h1>
-                <p>
-                    <i class="fa fa-scissors"></i> We are a warm little hair salon in Von, Ontario. just changed locations, but dont be mistaken
-                    we have a long history behind - <bold> 11 Years </bold> - and with all those years we learned alot,
-                    made mistakes and more than anything made friends that come every time again and again!
-                    We are a warm little hair salon in Von, Ontario. just changed locations, but dont be mistaken
-                    we have a long history behind - <bold> 11 Years </bold> - and with all those years we learned alot,
-                    made mistakes and more than anything made friends that come every time again and again!
-                    We are a warm little hair salon in Von, Ontario. just changed locations, but dont be mistaken
-                    we have a long history behind - <bold> 11 Years </bold> - and with all those years we learned alot,
-                    made mistakes and more than anything made friends that come every time again and again!
-                </p>
-            </div>
-        </div>
+    <div ng-view autoscroll></div>
 
-    </div>
-
-    <!--Parallax-->
-    <div class="parallax-window" data-parallax="scroll" data-image-src="images/parallax.jpg"></div>
-
-    <!--Team-->
-    <div class="container-fluid team-container">
-        <div class="row">
-            <div class="section-header">
-                <hr>
-                <h1><i class="fa fa-scissors"></i> Meet the Experts <i class="fa fa-scissors"></i>  </h1>
-                <hr>
-            </div>
-        </div>
-        <div class="row">
-            <div class="team-content">
-                <div class="col-lg-4 worker-profile">
-                    <img src="images/yula.jpg" alt="worker profile"/>
-                    <h2>Julia Jacob  </h2>
-                    <p>
-                        Townscape anapaestic schizophyceous exopoditic preabstract lamest aoristically homostylism. Rehospitalize undeducible erasability nunciata unlethargical snakemouth dethrone norton. Ceding unmagnetized melinite unmediated overpunishment acanthopterygian decoloriser weaponless. Subgular scrabble insatiably sociological polymerize kathleen enquiry seadog. Pisay crimple screeching computerize maintop seer dagoba bifilar.
-                    </p>
-                </div>
-
-                <div class="col-lg-4 worker-profile" >
-                    <img src="images/gil.jpg" alt="worker profile"/>
-                    <h2>Gil Jacob </h2>
-                    <p class="worker-info">
-                        Baron metamathematics criminology liquidizing haymow stroll angulate unworking. Emotionless forgivingness cervin stalemate unpleached pounder nonforfeitable melic. Leishmania preintimated metapsychological interreign successiveness word friend noncompensative. Evang throatlatch british unparliamentary finely paillette cannibalistic gawkishness. Heteropteran approbation nietzscheism submanor bughouses relationship nonmarriageability beckmann.
-                    </p>
-                </div>
-
-                <div  class="col-lg-4 worker-profile" alt="worker profile">
-                    <img src="images/nir.jpg"/>
-                    <h2>Nir Geller </h2>
-                    <p>
-                        Trispermous cotman horace gumming necrosis unmultipliable hannover collaborator. Earliness hyponoia kiwi obturation beriberic dither consecratedness weer. Couthily siganid dsm peapod separateness subpredication undewy screening. Unroweled endosmos sprightlier overimitation judoka leukocyte nonsubject allyou. Unenveloped sideswiper amorousness deceitfulness scamander adjoining biennially cogon.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--Parallax-->
-    <div class="parallax-window" data-parallax="scroll" data-image-src="images/parallax2.jpg"></div>
-
-    <!--Praise-->
-    <div class="container-fluid praise-container">
-        <div class="row">
-            <div class="section-header">
-                <hr>
-                <h1 style="color:#D75813"> What people say <i class="fa fa-bullhorn"></i></h1>
-                <hr>
-            </div>
-        </div>
-        <div class="row praise-row">
-            <div class="praise-content">
-                <div class="praise-text col-lg-4 col-lg-offset-1">
-                    <p>
-                        I have been going to Gil and Linda for over four years. They recently moved to a much more spacious salon and thus will be adding esthetics services as well. Gil and Linda are perfectionists, every time I go there my hair is perfect whether it is highlights, colour, cuts and blow drys. I travel over an hour, each way, to get to them because they are worth it. You won't be disappointed.
-                    </p>
-                    <div class="signature" style="text-align: right">
-                        <p> From, Becca A. </p>
-                    </div>
-                </div>
-                <div class="scissor-connection col-lg-2">
-                    <i class="fa fa-circle"> </i>
-                    <i class="fa fa-circle"> </i>
-                    <i class="fa fa-circle"> </i>
-                    <i class="fa fa-scissors fa-3x" style="position: relative; top: 8px"> </i>
-                    <i class="fa fa-circle"> </i>
-                    <i class="fa fa-circle"> </i>
-                    <i class="fa fa-circle"> </i>
-                    <i class="fa fa-circle"> </i>
-                    <i class="fa fa-circle"> </i>
-                    <i class="fa fa-circle last-dot"> </i>
-                </div>
-                <div class="praise-text praise-right col-lg-4 " >
-                    <p>
-                        Gil is an amazing hairdresser. He has the skill and vision to cut your hair which ever way you want. I have been going to the same guy for the last 13 years. I was convinced by my friends to try Gil out and have been going to him ever since. Always does an amazing job and stays consistent.
-                    </p>
-                    <div class="signature" style="text-align: right">
-                        <p> From, Yoni D.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--Parallax-->
-    <div class="parallax-window" data-parallax="scroll" data-image-src="images/parallax.jpg"></div>
-
-    <!--Contact-->
-    <div class="container-fluid contact-container">
-
-        <div class="row">
-            <div class="contact-content">
-                <div class="map col-md-5 col-md-offset-1" id="map" >
-
-                </div>
-                <div class="contact-text col-md-6">
-
-                    <div class="section-header contact-header">
-                        <h1>We would love to be your hair salon of choice</h1>
-                    </div>
-                    <p>
-                        Gil's Zoola salon is located at <bold class="important"> Unit 5, 30 Rivermede Rd, Vaughan, ON L4K 3N3.</bold>
-                        Its a lovely and warm place that always welcomes new guests and friends into the family.
-                        <br>
-                        Call Zoola salon today at <span class="important" id="phone"> (416) 887-7747</span> and join the family!
-                        <br>
-                        However please respect us and call at reasonable times <i class="fa fa-clock-o"></i>
-                    </p>
-                    <h2 class="section-header contact-header"> Already part of the family? </h2>
-                    <h4>
-                        <bold>subscribe</bold> now using your phone number <i class="fa fa-phone"> </i> or your email <i class="fa fa-envelope"></i>
-                        and get <bold>exclusive</bold> deals and offers for you and your family!
-                    </h4>
-                    <form class="form-horizontal" id="subscribeForm">
-                        <div class="form-group">
-                            <div class="col-lg-6 subscribe-email">
-                                <input type='email' class="form-control" placeholder="enter mail here">
-                            </div>
-                            <div class="col-lg-6">
-                                <input type='text' class="form-control" placeholder="enter phone number here">
-                            </div>
-                        </div>
-                        <div class="form-group subscribe-submit">
-                            <input type="submit" class="btn btn-lg btn-success" value="Subscribe and enjoy!">
-                        </div>
-                    </form>
-                    <!--<div class=" mail-header">-->
-                        <!--<h3>In a hurry? leave an email <i class="fa fa-envelope"></i></h3>-->
-                    <!--</div>-->
-                    <!--<form class="form-horizontal" id="email-form">-->
-                        <!--<div class="form-group">-->
-                            <!--<label class="control-label col-sm-2" for="email">contact:</label>-->
-                            <!--<div class="col-sm-5">-->
-                                <!--<input type="text" class="form-control" id="fullName" placeholder="Enter full name">-->
-                            <!--</div>-->
-                            <!--<div class="col-sm-5">-->
-                                <!--<input type="text" class="form-control" id="phoneNumber" placeholder="Enter phone number">-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="form-group">-->
-                            <!--<label class="control-label col-sm-2" for="email">email:</label>-->
-                            <!--<div class="col-sm-10">-->
-                                <!--<input type="email" class="form-control" id="email" placeholder="Enter email (example@gmail.com)">-->
-                            <!--</div>-->
-                        <!--</div>-->
-
-                        <!--<div class="form-group">-->
-                            <!--<label class="control-label col-sm-2" for="email-message">message:</label>-->
-                            <!--<div class="col-sm-10">-->
-                                <!--<textarea  id="email-message" placeholder="leave a message and we will contact you in no time :)"></textarea>-->
-                            <!--</div>-->
-                        <!--</div>-->
-
-                        <!--<div class="form-group contact-footer">-->
-                            <!--<div class="reset">-->
-                                <!--<input type="reset" class="btn btn-danger btn-lg" value="Click at own risk">-->
-                            <!--</div>-->
-
-                            <!--<div class="submit">-->
-                                <!--<input type="submit" class="btn btn-success btn-lg" value="See you soon">-->
-                            <!--</div>-->
-                        <!--</div>-->
-
-                    <!--</form>-->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid footer-container">
+    <footer class="container-fluid footer-container">
         <div class="row">
             <span class="credit pull-left"><i class="fa fa-creative-commons"> 2016 - Nir Geller </i></span>
             <span class="last info pull-right"> Gil Zoola Hair salon, Unit 5, 30 Rivermede Rd, Vaughan, ON L4K 3N3, call us any time <span style="color:#D75813">(416) 887-7747</span></span>
         </div>
-    </div>
+    </footer>
     <!--live reload-->
         <script src="//localhost:35729/livereload.js"></script>
     <!--bower:js-->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/parallax.js/parallax.min.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <!--endbower-->
-    <!--Custom-->
-    <script src="js/main.js"></script>
     <script src="https://use.fontawesome.com/d1ee8d9c1b.js"></script>
-    <script src="readmore-js/readmore.min.js"></script>
-    <!--end custom-->
-    <!--Google-->
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQG895e-uvGCZE2GSbwLWCIeqbyih9imI&callback=initMap">
-    </script>
+
+    <!--endbower-->
+    <script src="js/shell.js"></script>
+
+
 
 </body>
 </html>

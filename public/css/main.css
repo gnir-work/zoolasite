@@ -1,81 +1,3 @@
-html,body{
-    width: 100%;
-    height: 150%;
-}
-
-
-bold{
-    font-size: 1.1em;
-}
-/*Carousel*/
-
-#myCarousel, #myCarousel .carousel-inner , #myCarousel .item, #myCarousel img{
-    height: 85vh;
-    width: 99.1vw;
-}
-
-/*Carousel media icons*/
-.carousel-caption {
-    padding-left: 10px;
-}
-
-.center-media{
-    margin-right: 15px;
-    margin-left: 15px;
-}
-
-
-.fa-facebook:hover{
-    color:darkblue;
-    cursor: pointer;
-}
-
-.fa-instagram{
-    color:#fff;
-}
-
-.fa-instagram:hover{
-    color: purple;
-    cursor: pointer;
-
-}
-
-.fa-yelp{
-    color:red;
-}
-
-.fa-yelp:hover{
-    color: darkred;
-    cursor: pointer;
-}
-
-/*End Carousel*/
-
-/*NavBar*/
-.navbar-fixed-top {
-    background-color: rgba(0,0,0,0.55);
-    background-image: none;
-    border: 0;
-    padding-left: 25px;
-    padding-right: 2vw;
-}
-
-.logo{
-    color:white;
-    font-size: 1.7em;
-    font-family: 'Yellowtail', cursive;
-}
-
-.nav li a{
-    color:white !important;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.subscribe{
-    color:red !important;
-}
-
 /*About*/
 #about-image-container{
     text-align: center;
@@ -91,8 +13,8 @@ bold{
 }
 
 #about-container{
-    margin-top: 12vh;
-    margin-bottom: 15vh;
+    margin-top: 8vh;
+    margin-bottom: 10vh;
 }
 
 
@@ -114,26 +36,15 @@ bold{
     margin:0;
     height: 22.5vw;
     background: transparent;
+
 }
 
-/*Section header*/
-.section-header{
-    width: 30vw;
-    margin: auto;
-    text-align: center;
-    color:darkred;
-    font-family: 'Montserrat', sans-serif;
-}
-
-
-hr {
-    border: none;
-    height: 1px;
+.parallax-window img{
+    max-height: 100%;
     width: 100%;
-    /* Set the hr color */
-    color: #333; /* old IE */
-    background-color: #333; /* Modern Browsers */
 }
+
+
 
 /*Meet the Team*/
 .team-container{
@@ -215,6 +126,11 @@ hr {
     width: 90%;
 }
 
+/*Contact map*/
+.map-container{
+    padding: 0;
+}
+
 #map {
     height: 75vh;
     margin-top: 25px;
@@ -271,11 +187,7 @@ hr {
     }
 }
 
-@media (max-width: 1360px) {
-    .footer-container{
-        display: none;
-    }
-}
+
 
 @media (max-width: 1200px) {
     .scissor-connection{
@@ -324,10 +236,6 @@ hr {
 }
 
 @media (max-width: 780px) {
-    /*Carousel*/
-    #myCarousel, #myCarousel .carousel-inner , #myCarousel .item, #myCarousel img{
-        height: 65vh;
-    }
 
     /*Meet the team*/
     .worker-profile img{
@@ -350,9 +258,6 @@ hr {
         height: 50vh;
     }
 
-    #fullName{
-        margin-bottom: 15px;
-    }
 }
 
 @media (max-width: 530px) {
@@ -363,11 +268,6 @@ hr {
 }
 
 @media (max-width: 480px){
-
-    /*Carousel*/
-    #myCarousel, #myCarousel .carousel-inner , #myCarousel .item, #myCarousel img{
-        height: 47.5vh;
-    }
 
     /*About*/
     #about-container{
@@ -380,8 +280,6 @@ hr {
         min-height: 250px;
         margin:auto;
     }
-
-
 
     .section-header h1{
         font-size: 1.8em;

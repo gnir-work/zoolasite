@@ -1,3 +1,3 @@
 
 //Initialize main module
-angular.module('mainPage',[]);
+angular.module('mainPage',['ngMap']);

@@ -4,17 +4,17 @@
 
 angular.
     module('zoolaApp').
-    config(['$locationProvider', 'routeProvider',
+    config(['$locationProvider', '$routeProvider',
         function config($locationProvider, $routeProvider) {
 
             $locationProvider.hashPrefix('!');
 
             $routeProvider.
                 when('/main', {
-                    template: '<main-page></main-page>'
+                    template: '<main-page></main-page>',
             }).
                 when('/gallery',{
-                    template: '<gallery-page></gallery-page>'
+                    template: '<gallery></gallery>'
             }).
                 otherwise('/main')
         }

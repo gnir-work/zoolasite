@@ -25,9 +25,12 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "parallax.js": "^1.4.2",
     "device.js": "readmore.js#^0.0.2",
     "angular": "^1.5.8",
-    "angular-route": "^1.5.8"
+    "angular-route": "^1.5.8",
+    "ngmap": "^1.17.3",
+    "ng-simple-parallax": "*",
+    "ng-parallax": "^0.1.8",
+    "parallax.js": "^1.4.2"
   }
 }

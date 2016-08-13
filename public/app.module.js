@@ -2,5 +2,6 @@
 
 angular.module('zoolaApp', [
     'ngRoute', 
-    'mainPage'
+    'mainPage',
+    'gallery'
 ]);
