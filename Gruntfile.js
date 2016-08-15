@@ -57,7 +57,7 @@ module.exports = function (grunt) {
 		watch: {
 			livereload: {
 				options: { livereload: true },
-				files: ['views/*', 'public/css/*']
+				files: ['views/*', 'public/**']
 			}
 		},
 		express:{

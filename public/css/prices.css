@@ -1,0 +1,118 @@
+.app-container{
+    background-color:black;
+}
+
+.prices-header{
+    margin: auto;
+    margin-top:25px;
+    text-align: center;
+    width: 60vw;
+}
+
+.fancy-heading{
+    position: relative;
+    display: inline;
+    color: white;
+    /*text-shadow: 0.5px 0.5px darkred;*/
+    font-family: 'Ewert', cursive;
+
+}
+
+.fancy-heading::before,
+.fancy-heading::after {
+    content: "";
+    position: absolute;
+    height: 10px;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+    top: 0.5em;
+    width: 12.5vw;
+}
+
+.fancy-heading:before {
+    right: 100%;
+    margin-right: 20px;
+}
+.fancy-heading:after {
+    left: 100%;
+    margin-left: 20px;
+}
+
+.prices-header p{
+    margin-top: 10px;
+    color: whitesmoke;
+    font-size: 1.2em;
+    font-family: 'Casual';
+}
+
+.prices-header p a{
+    text-decoration: none;
+    color: darkred;
+    font-size: 1.3em;
+    font-weight: 600;
+    padding-left: 3px;
+    padding-right: 6px;
+}
+
+.prices-header img{
+    margin-top: 12px;
+    border-radius: 20%;
+}
+
+.prices-content{
+    text-align: center;
+    margin: auto;
+    width: 70vw;
+}
+
+.prices-table{
+    width: 60vw;
+    margin: auto;
+    margin-top:30px;
+
+}
+
+.prices-table td {
+    max-width:200px;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.prices-table{
+    font-family: 'Lobster' !important;
+    color:#AB0000;
+    font-size: 2em;
+}
+
+.prices-table th{
+    text-align: center;
+}
+
+.price-cell{
+    padding-left: 10px;
+    width: 1px;
+    text-align: right;
+}
+
+.prices-table td:first-child{
+    text-align: left;
+}
+
+.prices-table td:first-child:after {
+    margin-left: 5px;
+    content:"............................................................................................................................................................. "
+}
+
+@media (max-width: 550px){
+    .fancy-heading::before,
+    .fancy-heading::after{
+        width: 8vw;
+    }
+}
+
+@media (max-width: 480px){
+    .fancy-heading::before,
+    .fancy-heading::after{
+        display: none;
+    }
+}

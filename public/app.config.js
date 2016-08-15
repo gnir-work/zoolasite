@@ -16,6 +16,9 @@ angular.
                 when('/gallery',{
                     template: '<gallery></gallery>'
             }).
+                when('/prices',{
+                    template: '<prices></prices>'
+            }).
                 otherwise('/main')
         }
     ]);

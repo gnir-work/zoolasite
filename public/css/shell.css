@@ -1,0 +1,150 @@
+/*General*/
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+
+bold{
+    font-size: 1.1em;
+}
+
+
+/*Fonts*/
+@font-face {
+    font-family: 'Casual';
+    src: url('fonts/Casual-Regular.ttf');
+}
+
+/*Carousel*/
+#myCarousel img{
+    height: 85vh;
+    width: 100vw;
+}
+
+/*Carousel media icons*/
+.carousel-caption {
+    padding-left: 10px;
+}
+
+.carousel-caption h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.6em;
+    text-shadow: 2px 2px black;
+    color:whitesmoke;
+}
+
+.center-media{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.fa-facebook:hover{
+    color:darkblue;
+    cursor: pointer;
+}
+
+.fa-instagram{
+    color:#fff;
+}
+
+.fa-instagram:hover{
+    color: purple;
+    cursor: pointer;
+
+}
+
+.fa-yelp{
+    color:red;
+}
+
+.fa-yelp:hover{
+    color: darkred;
+    cursor: pointer;
+}
+
+/*End Carousel*/
+
+/*NavBar*/
+.navbar-fixed-top {
+    background-color: rgba(0,0,0,0.55);
+    background-image: none;
+    border: 0;
+    padding-left: 25px;
+    padding-right: 2vw;
+}
+
+.logo{
+    color:white;
+    font-size: 1.7em;
+    font-family: 'Yellowtail', cursive;
+}
+
+.nav li a{
+    color:white !important;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.subscribe{
+    color:red !important;
+}
+
+
+/*Section header*/
+.section-header{
+    width: 30vw;
+    margin: auto;
+    text-align: center;
+    color:darkred;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+hr {
+    border: none;
+    height: 1px;
+    width: 100%;
+    /* Set the hr color */
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+}
+
+/*Footer*/
+.footer-container{
+    padding-left: 8vh;
+    padding-right: 8vh;
+    background: #1C1F24;
+    color:whitesmoke;
+    font-size: 1.4em;
+}
+
+
+@media (max-width: 1360px) {
+    .footer-container{
+        display: none;
+    }
+}
+
+@media (max-width: 780px) {
+    /*Carousel*/
+    #myCarousel, #myCarousel .carousel-inner, #myCarousel .item, #myCarousel img {
+        height: 65vh;
+    }
+
+    .carousel-caption h1{
+        font-size: 3.5em;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /*Carousel*/
+    #myCarousel, #myCarousel .carousel-inner, #myCarousel .item, #myCarousel img {
+        height: 47.5vh;
+    }
+
+    .carousel-caption h1{
+        font-size: 3em;
+    }
+}

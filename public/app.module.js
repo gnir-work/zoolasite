@@ -3,5 +3,6 @@
 angular.module('zoolaApp', [
     'ngRoute', 
     'mainPage',
-    'gallery'
+    'gallery',
+    'prices'
 ]);
