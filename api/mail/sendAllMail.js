@@ -10,7 +10,6 @@ module.exports = function(cb){
         if(err)
             cb(err);
         var email_subscribers = data.email;
-        console.log(email_subscribers)
         async.map(email_subscribers, buildMailData, function(err, emails){
             async.each(emails, require('./sendMail'), function(err){
                 if(err)

@@ -4,7 +4,6 @@ var mailGun = require('mailgun-js')({apiKey: key, domain: domain});
 
 module.exports = function(data, cb){
     mailGun.messages().send(data, function(err, body){
-        console.log(body);
         if(err)
             return cb(err);
         cb(null);

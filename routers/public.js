@@ -24,9 +24,6 @@ router.put('/:phone/:email', function(req, res){
     })
 });
 
-//Default
-router.get('*', function(req, res){
-    res.redirect('/');
-});
+
 
 module.exports = router;
