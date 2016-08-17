@@ -1,6 +1,6 @@
 
 angular.module('mainPage').
-    controller('mainPageController', function($scope, $location, NgMap){
+    controller('mainPageController', function($scope, $location, NgMap, $http, $timeout){
 
     $scope.googleMapsUrl="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQG895e-uvGCZE2GSbwLWCIeqbyih9imI";
     //google map
@@ -53,11 +53,44 @@ angular.module('mainPage').
         }, 'slow');
     };
 
-    var element = $($location.search().scroll);
-    if(element) {
-        scrollTo(element);
+    var elementName = $location.search().scroll;
+    if(elementName) {
+        scrollTo($(elementName));
+    }
+    
+    var controller = this;
+    //subscribing
+    this.subscribe = function($valid){
+        if($valid){
+            var phone = 'empty', email = 'empty';
+
+            //Check input
+            if($scope.phone && $scope.phone.length)
+                phone = $scope.phone;
+            if($scope.email && $scope.email.length)
+                email = $scope.email;
+
+            var url = '/' + phone + '/' + email;
+            $http.put(url).then(function Success(response){
+                controller.subscribeSuccess= response.data.output;
+                controller.showSubscribeSuccess= true;
+
+                $timeout(function(){
+                    controller.subscribeSuccess= '';
+                    controller.showSubscribeSuccess= false;
+                }, 3000)
+            }, function Error(error){
+                controller.subscribeError = error.data.err;
+                controller.showSubscribeError = true;
+
+                $timeout(function(){
+                    controller.subscribeError = '';
+                    controller.showSubscribeError = false;
+                }, 2300)
+            })
+        }
     }
 
-
+    
 
 });

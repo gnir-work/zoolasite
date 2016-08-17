@@ -57,6 +57,7 @@ angular.module('gallery').
         }
     }
     photos.push(tmpPhotos);
-    $scope.photos = photos;
+    this.photos = photos;
 
+    
 });

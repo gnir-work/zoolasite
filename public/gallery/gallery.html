@@ -12,7 +12,7 @@
     </div>
     <div class="row">
         <div class="gallery-content">
-            <div class="row image-row" ng-repeat="row in photos">
+            <div class="row image-row" ng-repeat="row in $ctrl.photos">
                 <div class="col-md-3 col-sm-6 image-container" ng-repeat="photo in row">
                     <img class="thumbnail img-responsive" ng-click="$ctrl.showPhoto($event)" src="{{photo.src}}" alt="photo.alt"/>
                 </div>

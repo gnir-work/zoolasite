@@ -16,8 +16,13 @@
   "author": "nir geller",
   "license": "MIT",
   "dependencies": {
+    "async": "^2.0.1",
     "ejs": "^2.5.1",
     "express": "^4.14.0",
+    "fs": "0.0.2",
+    "instagram-node": "^0.5.8",
+    "jsonfile": "^2.3.1",
+    "mailgun-js": "^0.7.12",
     "path": "^0.12.7",
     "readmore-js": "^2.1.0"
   },

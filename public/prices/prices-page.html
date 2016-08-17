@@ -12,9 +12,16 @@
         <tr>
             <th><h1> Hair Services </h1></th>
         </tr>
-        <tr >
-            <td> <i class="fa fa-scissors"> </i>  Boys Cut </td>
-            <td class="price-cell"> 15 <i class="fa fa-usd" aria-hidden="true"></i></td>
+        <tr ng-repeat="hairCut in $ctrl.cuts">
+            <td>   {{hairCut.cut}} </td>
+            <td class="price-cell"> {{hairCut.price}} <i class="fa fa-usd" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+            <th><h1>Combos and Deals</h1> </th>
+        </tr>
+        <tr ng-repeat="deal in $ctrl.deals">
+            <td>   {{deal.name}} </td>
+            <td class="price-cell"> {{deal.price}} <i class="fa fa-usd" aria-hidden="true"></i></td>
         </tr>
 
     </table>

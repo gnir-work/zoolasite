@@ -151,18 +151,29 @@
                     <bold>subscribe</bold> now using your phone number <i class="fa fa-phone"> </i> or your email <i class="fa fa-envelope"></i>
                     and get <bold>exclusive</bold> deals and offers for you and your family!
                 </h4>
-                <form class="form-horizontal" id="subscribeForm">
+                <form class="form-horizontal" name="subscribeForm" ng-submit="$ctrl.subscribe(subscribeForm.$valid)" id="subscribeForm" novalidate>
                     <div class="form-group">
-                        <div class="col-lg-6 subscribe-email">
-                            <input type='email' class="form-control" placeholder="enter mail here">
+                        <div class="col-lg-6 subscribe-email " >
+                            <input type='email' class="form-control " ng-model="email" name="email" placeholder="enter mail here" ng-required="!phone.length">
+                            <div class="text-danger" ng-show="subscribeForm.email.$viewValue.length && subscribeForm.email.$invalid && subscribeForm.email.$touched && !subscribeForm.email.$pristine && subscribeForm.$invalid " class="help-block">Please enter a valid email or delete current one.</div>
                         </div>
                         <div class="col-lg-6">
-                            <input type='text' class="form-control" placeholder="enter phone number here">
+                            <input type='text' ng-pattern="/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/" ng-minlength="10" class="form-control" ng-model="phone" name="phone" placeholder="enter phone number here" ng-required="!email.length">
+                            <div class="text-danger" ng-show="subscribeForm.phone.$viewValue.length &&subscribeForm.phone.$invalid && subscribeForm.phone.$touched && !subscribeForm.phone.$pristine && subscribeForm.$invalid " class="help-block">Please enter a valid phone or delete current one.</div>
                         </div>
                     </div>
-                    <div class="form-group subscribe-submit">
-                        <input type="submit" class="btn btn-lg btn-success" value="Subscribe and enjoy!">
+
+                    <div class="alert alert-danger col-sm-12" ng-show="$ctrl.showSubscribeError">
+                        {{$ctrl.subscribeError}}
                     </div>
+                    <div class="alert alert-success col-sm-12" ng-show="$ctrl.showSubscribeSuccess">
+                        {{$ctrl.subscribeSuccess}}
+                    </div>
+
+                    <div class="form-group subscribe-submit">
+                        <input type="submit" ng-disabled="subscribeForm.$invalid" class="btn btn-lg btn-success"  value="Subscribe and enjoy!">
+                    </div>
+
                 </form>
             </div>
         </div>

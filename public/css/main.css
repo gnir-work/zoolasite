@@ -112,6 +112,18 @@
     color: #000;
 }
 
+.text-danger{
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-family: Casual;
+    font-weight: bold;
+}
+
+.alert{
+    font-weight: bold;
+    font-family: Casual;
+    text-align: center;
+}
 
 /*Contact*/
 .contact-container{

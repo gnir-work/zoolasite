@@ -31,6 +31,7 @@
     "ngmap": "^1.17.3",
     "ng-simple-parallax": "*",
     "ng-parallax": "^0.1.8",
-    "parallax.js": "^1.4.2"
+    "parallax.js": "^1.4.2",
+    "instafeed.js": "^1.4.1"
   }
 }

@@ -1,5 +1,5 @@
 .app-container{
-    background-color:black;
+    background-color:#EDEDED;
 }
 
 .prices-header{
@@ -12,7 +12,7 @@
 .fancy-heading{
     position: relative;
     display: inline;
-    color: white;
+    color: black;
     /*text-shadow: 0.5px 0.5px darkred;*/
     font-family: 'Ewert', cursive;
 
@@ -23,8 +23,8 @@
     content: "";
     position: absolute;
     height: 10px;
-    border-bottom: 3px solid white;
-    border-top: 3px solid white;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
     top: 0.5em;
     width: 12.5vw;
 }
@@ -40,7 +40,7 @@
 
 .prices-header p{
     margin-top: 10px;
-    color: whitesmoke;
+    color: black;
     font-size: 1.2em;
     font-family: 'Casual';
 }
@@ -73,6 +73,7 @@
 }
 
 .prices-table td {
+    font-family: Casual;
     max-width:200px;
     overflow:hidden;
     white-space:nowrap;
@@ -80,12 +81,14 @@
 
 .prices-table{
     font-family: 'Lobster' !important;
-    color:#AB0000;
+    color:black;
     font-size: 2em;
 }
 
 .prices-table th{
+    color: #1C1F24;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .price-cell{
