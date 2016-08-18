@@ -13,13 +13,13 @@ angular.module('mainPage').
     //Parallax code
     var parallaxData = [{
         id: '#firstParallax',
-        src: 'images/parallax.jpg'
+        src: 'images/zoola_parallax2.jpg'
     },{
         id: '#secondParallax',
-        src: 'images/parallax2.jpg'
+        src: 'images/zoola_inside.jpg'
     },{
         id: '#thirdParallax',
-        src: 'images/parallax.jpg'
+        src: 'images/parallax2.jpg'
     }];
 
     parallaxData.forEach(function(data){
@@ -62,15 +62,8 @@ angular.module('mainPage').
     //subscribing
     this.subscribe = function($valid){
         if($valid){
-            var phone = 'empty', email = 'empty';
-
-            //Check input
-            if($scope.phone && $scope.phone.length)
-                phone = $scope.phone;
-            if($scope.email && $scope.email.length)
-                email = $scope.email;
-
-            var url = '/' + phone + '/' + email;
+            
+            var url = '/' + $scope.email;
             $http.put(url).then(function Success(response){
                 controller.subscribeSuccess= response.data.output;
                 controller.showSubscribeSuccess= true;

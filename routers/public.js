@@ -7,7 +7,7 @@ router.get('/', function(req, res, next){
 });
 
 //Subscribe
-router.put('/:phone/:email', function(req, res){
+router.put('/:email', function(req, res){
 
     var email = req.params.email;
     if(email == 'empty' || !email)
@@ -17,13 +17,21 @@ router.put('/:phone/:email', function(req, res){
     if(phone == 'empty' || !phone)
         phone = null;
 
-    require('../api/subscribe')({phone: phone, email: email}, function(err, output){
+    require('../api/subscription/subscribe')({phone: phone, email: email}, function(err, output){
         if(err)
             return require('../utils/errHandler')(err, res);
         res.json({output: output})
     })
 });
 
-
+//Unsubscribe
+router.get('unsubscribe/:method/:contactInfo', function(req, res){
+    console.log('test');
+    require('../api/subscription/unsubscribe')(req.params.method, req.params.contactInfo, function(err, output){
+        if(err)
+            return require('../utils/errHandler')(err, res);
+        res.end(output);
+    })
+});
 
 module.exports = router;

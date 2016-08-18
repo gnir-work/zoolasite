@@ -98,16 +98,23 @@ bold{
     text-align: center;
     color:darkred;
     font-family: 'Montserrat', sans-serif;
+
 }
 
 
 hr {
     border: none;
-    height: 1px;
+    height: 1.5px;
     width: 100%;
     /* Set the hr color */
     color: #333; /* old IE */
     background-color: #333; /* Modern Browsers */
+    background: red; /* For browsers that do not support gradients */
+
+    background: -webkit-linear-gradient(-90deg, transparent, black, transparent); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-90deg, transparent, black, transparent); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-90deg, transparent, black, transparent); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-90deg, transparent, black, transparent); /* Standard syntax */
 }
 
 /*Footer*/

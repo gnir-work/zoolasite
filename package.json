@@ -24,7 +24,8 @@
     "jsonfile": "^2.3.1",
     "mailgun-js": "^0.7.12",
     "path": "^0.12.7",
-    "readmore-js": "^2.1.0"
+    "readmore-js": "^2.1.0",
+    "shortid": "^2.2.6"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
