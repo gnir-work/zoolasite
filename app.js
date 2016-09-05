@@ -14,9 +14,9 @@ app.use('/admin', require('./routers/admin'));
 
 app.use('/insta', require('./routers/instagram'));
 
-app.get('*', function(req, res){
-    res.redirect('/');
-});
+// app.get('*', function(req, res){
+//     res.redirect('/');
+// });
 
 
 module.exports = app;

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="adminPage">
+<head>
+    <meta charset="UTF-8">
+    <title>Zoola Admin</title>
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+    <title>Zoola Salon</title>
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/admin.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Ewert|Lobster|Yellowtail' rel='stylesheet' type='text/css'>
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!--angular-->
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="admin.module.js"></script>
+    <scrip src="admin.controller.js"></scrip>
+</head>
+<body >
+    <header ng-controller="adminController">
+        <h1>Zoola Salon Site Admin Page {{test}}</h1>
+    </header>
+    <!--live reload-->
+    <script src="//localhost:35729/livereload.js"></script>
+    <!--bower:js-->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../bower_components/parallax.js/parallax.min.js"></script>
+    <script src="https://use.fontawesome.com/d1ee8d9c1b.js"></script>
+
+    <!--endbower-->
+</body>
+</html>

@@ -1,5 +1,9 @@
 var router = require('express').Router();
 
+router.get('/', function(req, res){
+    res.render('admin');
+});
+
 router.get('/push', function(req, res){
     require('../api/mail/sendAllMail')(function(err, output){
         if(err)
