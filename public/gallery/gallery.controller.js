@@ -1,4 +1,5 @@
 
+//Gallery controller
 angular.module('gallery').
     controller('galleryController', function($scope, $http){
     $('.parallax-mirror').remove();

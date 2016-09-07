@@ -1,6 +1,7 @@
 
+//Gallery component
 angular.module('gallery').
     component('gallery', {
-        templateUrl: 'gallery/gallery.html',
+        templateUrl: 'gallery/gallery-page.html',
         controller: 'galleryController'
 });

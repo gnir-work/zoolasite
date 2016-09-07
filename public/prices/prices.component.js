@@ -1,5 +1,5 @@
 
-//Main page component
+//Prices page component
 angular.module('prices').
 component('prices', {
     templateUrl: 'prices/prices-page.html',

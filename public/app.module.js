@@ -1,5 +1,5 @@
-//Initialize main module
 
+//Zoola module
 angular.module('zoolaApp', [
     'ngRoute', 
     'mainPage',

@@ -20,32 +20,6 @@ module.exports = function (grunt) {
 
 	// Define the configuration for all the tasks
 	grunt.initConfig({
-		clean  : {
-			dist : {
-				files : [{
-					dot : true,
-					src : ['.tmp', '<%= paths.dist %>/*', '!<%= paths.dist %>/.git*']
-				}]
-			}
-		},
-		copy : {
-			dist : {
-				files : [ {
-					expand : true,
-					dot    : false,
-					cwd    : '<%= paths.app %>',
-					dest   : '<%= paths.dist %>',
-					src    : [ '*.{ico,png,txt}', '.htaccess', 'images/{,*/}*.webp', '{,*/}*.html', 'styles/fonts/{,*/}*.*' ]
-				}]
-			},
-			styles : {
-				expand : true,
-				dot    : false,
-				cwd    : '<%= paths.app %>/styles',
-				dest   : '.tmp/styles/',
-				src    : '{,*/}*.css'
-			}
-		},
 		wiredep:{
 			target:{
 				src:'views/index.ejs'
@@ -72,19 +46,101 @@ module.exports = function (grunt) {
 				path:'http://127.0.0.1:9000',
 				app: 'iceweasel'
 			}
+		},
+		imagemin: {
+			dynamic: {
+				options: {
+					optimizationLevel: 7
+				},
+				files: [{
+					expand: true,                  // Enable dynamic expansion
+					cwd: 'public/images',                   // Src matches are relative to this path
+					src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+					dest: 'dist/public/images'                  // Destination path prefix
+				}]
+			}
+		},
+		ngAnnotate: {
+			options: {
+				singleQuotes: true
+			},
+			app: {
+				files: {
+					'tmp/app.js' : ['public/app.module.js', 'public/app.config.js',  'public/app.component.js'],
+					'tmp/gallery.js' : ['public/gallery/gallery.module.js', 'public/gallery/gallery.controller.js',  'public/gallery/gallery.component.js'],
+					'tmp/prices.js' : ['public/prices/prices.module.js', 'public/prices/prices.controller.js',  'public/prices/prices.component.js'],
+					'tmp/main.js' : ['public/main/main.module.js', 'public/main/main.controller.js',  'public/main/main.component.js']
+				}
+			}
+
+		},
+		concat: {
+			js:{
+				src:['tmp/*.js'],
+				dest: 'tmp/costumeJs.js'
+			}
+		},
+		uglify: {
+			js: {
+				src: 'tmp/costumeJs.js',
+				dest: 'dist/public/costumeJs.js'
+			}
+		},
+		cssmin: {
+			target: {
+				files: [{
+					src: 'tmp/costumeCss.css',
+					dest: 'dist/public/costumeCss.css'
+				}]
+			}
+		},
+		processhtml: {
+			dist: {
+				files: {
+					'tmp/index.ejs' : ['views/index.ejs'],
+					'tmp/gallery-page.html' : ['public/gallery/gallery-page.html'],
+					'tmp/prices-page.html' : ['public/prices/prices-page.html'],
+					'tmp/main-page.html' : ['public/main/main-page.html']
+				}
+			}
+		},
+		htmlmin:{
+			dist: {                                      // Target
+				options: {                                 // Target options
+					removeComments: true,
+					collapseWhitespace: true
+				},
+				files: {                                   // Dictionary of files
+					'dist/views/index.ejs': 'tmp/index.ejs',     // 'destination': 'source'
+					'dist/public/gallery/gallery-page.html': 'tmp/gallery-page.html',
+					'dist/public/prices/prices-page.html': 'tmp/prices-page.html',
+					'dist/public/main/main-page.html': 'tmp/main-page.html'
+				}
+			}
+		},
+		copy: {
+			main:{
+				expand: true,
+				src: ['public/fonts/*','routers/*', 'api/**', 'etc/*', 'utils/*', 'app.js', 'server.js', 'public/bower_components/ngmap/build/scripts/ng-map.min.js', 'public/bower_components/parallax.js/parallax.min.js', 'public/css/*'],
+				dest: 'dist/'
+			}
+
 		}
 	});
 
-	// grunt.registerTask('build', [
-	// 	'clean:dist',
-	// 	'concat',
-	// 	'uglify',
-	// 	'copy:dist'
-	// ]);
 	grunt.registerTask('run',[
 		'express',
 		'open:dev',
 		'watch'
+	]);
+	grunt.registerTask('build',[
+		'imagemin',
+		'ngAnnotate',
+		'concat',
+		'uglify',
+		'processhtml',
+		'htmlmin',
+		'copy'
 	])
 
 };

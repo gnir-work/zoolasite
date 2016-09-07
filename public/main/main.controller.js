@@ -1,4 +1,5 @@
 
+//Main page component
 angular.module('mainPage').
     controller('mainPageController', function($scope, $location, NgMap, $http, $timeout){
 

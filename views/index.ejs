@@ -4,16 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
     <title>Zoola Salon</title>
+
+    <!--css-->
+    <!-- build:remove -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- /build -->
+    <!-- build:template
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        /build -->
     <link href="css/shell.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Ewert|Lobster|Yellowtail' rel='stylesheet' type='text/css'>
-    <!-- bower:css -->
-    <!-- endbower -->
+
+    <!--end css-->
+
     <!--angular-->
+
+    <!-- build:remove -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/ngmap/build/scripts/ng-map.js"></script>
-    <script src="bower_components/ng-simple-parallax/js/ngParallax.js"></script>
+    <!-- /build -->
+
+    <!-- build:template
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    /build -->
+
+    <script src="bower_components/ngmap/build/scripts/ng-map.min.js"></script>
+
+    <!--end angular-->
+
+
+    <!-- build:js costumeJs.js -->
     <script src="app.module.js"></script>
     <script src="app.config.js"></script>
     <script src="main/main.module.js"></script>
@@ -25,7 +46,7 @@
     <script src="prices/prices.module.js"></script>
     <script src="prices/prices.controller.js"></script>
     <script src="prices/prices.component.js"></script>
-
+    <!-- /build -->
 </head>
 <body>
     <header>
@@ -40,7 +61,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img src="images/blackHair.jpeg" alt="Chania">
+                    <img src="images/blackHair.jpg" alt="Chania">
                     <div class="carousel-caption">
                         <h1>Find us on</h1>
                         <p>
@@ -102,18 +123,34 @@
             <span class="last info pull-right"> Gil Zoola Hair salon, Unit 5, 30 Rivermede Rd, Vaughan, ON L4K 3N3, call us any time <span style="color:#D75813">(416) 887-7747</span></span>
         </div>
     </footer>
+
+    <!-- build:remove -->
     <!--live reload-->
         <script src="//localhost:35729/livereload.js"></script>
+    <!-- /build -->
+
     <!--bower:js-->
+    <!-- build:remove -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/parallax.js/parallax.min.js"></script>
+    <!-- /build -->
+    <!-- build:template
+
+        <script
+			  src="https://code.jquery.com/jquery-2.2.4.min.js"
+			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			  crossorigin="anonymous">
+        </script>
+
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous">
+        </script>
+
+    /build-->
     <script src="https://use.fontawesome.com/d1ee8d9c1b.js"></script>
-
-    <!--endbower-->
-    <script src="js/shell.js"></script>
-
-
+    <script src="bower_components/parallax.js/parallax.min.js"></script>
 
 </body>
 </html>

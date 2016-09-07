@@ -1,7 +1,5 @@
-/**
- * Created by nir on 8/11/16.
- */
 
+//Zoola App config
 angular.
     module('zoolaApp').
     config(['$locationProvider', '$routeProvider',
