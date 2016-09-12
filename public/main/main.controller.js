@@ -45,7 +45,7 @@ angular.module('mainPage').
 
         var circleWidth = $('.fa-circle').width();
         var numOfCircles = Math.round(($('.scissor-connection').width() - circleWidth * 6) / circleWidth) / 2;
-        for(var i = 0; i < numOfCircles; i++)
+        for(var i = 0; i < numOfCircles - 1; i++)
             $('.scissor-connection').append('<i class="fa fa-circle"> </i>')
         $('.scissor-connection').append('<i class="fa fa-circle last-dot"> </i>')
 
