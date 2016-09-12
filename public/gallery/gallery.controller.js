@@ -31,6 +31,7 @@ angular.module('gallery').
         }
         photos.push(tmpPhotos);
         controller.photos = photos;
+        $('.gallery-loader').hide();
     }, function Error(err){
         console.log(JSON.stringify(err));
     });

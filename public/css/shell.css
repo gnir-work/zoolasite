@@ -9,6 +9,9 @@ bold{
     font-size: 1.1em;
 }
 
+.row{
+    max-width: 100vw;
+}
 
 /*Fonts*/
 @font-face {
@@ -126,6 +129,12 @@ hr {
     font-size: 1.4em;
 }
 
+
+@media (min-width: 1500px){
+    body{
+        font-size: 2em;
+    }
+}
 
 @media (max-width: 1360px) {
     .footer-container{

@@ -1,4 +1,5 @@
 /*About*/
+
 #about-image-container{
     text-align: center;
 
@@ -36,6 +37,7 @@
     margin:0;
     height: 22.5vw;
     background: transparent;
+    min-height: 250px;
 
 }
 
@@ -110,6 +112,10 @@
 
 .scissor-connection{
     color: #000;
+}
+
+.fa-circle{
+    margin-left: 3px;
 }
 
 .text-danger{

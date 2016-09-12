@@ -37,36 +37,20 @@
     </div>
     <div class="row">
         <div class="team-content">
-            <div class="col-lg-4 worker-profile">
-                <img src="images/yula.jpg" alt="worker profile"/>
-                <h2>Julia Jacob  </h2>
-                <p>
-                    Townscape anapaestic schizophyceous exopoditic preabstract lamest aoristically homostylism. Rehospitalize undeducible erasability nunciata unlethargical snakemouth dethrone norton. Ceding unmagnetized melinite unmediated overpunishment acanthopterygian decoloriser weaponless. Subgular scrabble insatiably sociological polymerize kathleen enquiry seadog. Pisay crimple screeching computerize maintop seer dagoba bifilar.
-                </p>
+
+            <div class="row" ng-repeat="workers in $ctrl.workersRows">
+                <div class="worker-profile" ng-repeat="worker in workers">
+                    <div class="col-lg-{{12 / workers.length}} col-sm-6">
+                        <img src={{worker.src}} alt="worker profile"/>
+                        <h2>Julia Jacob  </h2>
+                        <p>
+                            {{ worker.description }}
+                        </p>
+                    </div>
+                </div>
             </div>
 
-            <div class="col-lg-4 worker-profile" >
-                <img src="images/gil.jpg" alt="worker profile"/>
-                <h2>Gil Jacob </h2>
-                <p class="worker-info">
-                    Gil Jacob, the owner of the salon
-                    always be the first one to greet you with a smile at the salon.
-                    Gil started his way as a hair dresser at the age of 14 when he first cut his sisters hair and knew
-                    right away that hair dressing is his destiny.
-                    He started working as a hairdressing assistant when he was just 16 years old and 5 years later open his own hair salon.
-                    The Zoola Hair Salon is the end product of 16 long years of dedication and love to hair dressing,
-                    as you can probably guess
-                    its a wonderful and lovely place.
-                </p>
-            </div>
 
-            <div  class="col-lg-4 worker-profile" alt="worker profile">
-                <img src="images/nir.jpg"/>
-                <h2>Nir Geller </h2>
-                <p>
-                    Trispermous cotman horace gumming necrosis unmultipliable hannover collaborator. Earliness hyponoia kiwi obturation beriberic dither consecratedness weer. Couthily siganid dsm peapod separateness subpredication undewy screening. Unroweled endosmos sprightlier overimitation judoka leukocyte nonsubject allyou. Unenveloped sideswiper amorousness deceitfulness scamander adjoining biennially cogon.
-                </p>
-            </div>
         </div>
     </div>
 </div>
@@ -98,12 +82,6 @@
                 <i class="fa fa-circle"> </i>
                 <i class="fa fa-circle"> </i>
                 <i class="fa fa-scissors fa-3x" style="position: relative; top: 8px"> </i>
-                <i class="fa fa-circle"> </i>
-                <i class="fa fa-circle"> </i>
-                <i class="fa fa-circle"> </i>
-                <i class="fa fa-circle"> </i>
-                <i class="fa fa-circle"> </i>
-                <i class="fa fa-circle last-dot"> </i>
             </div>
             <div class="praise-text praise-right col-lg-4 " >
                 <p>
