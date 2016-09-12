@@ -66,7 +66,7 @@ module.exports = function (grunt) {
 			},
 			app: {
 				files: {
-					'tmp/app.js' : ['public/app.module.js', 'public/app.config.js',  'public/app.component.js'],
+					'tmp/app.js' : ['public/app.module.js', 'public/app.config.js',  'public/app.controller.js'],
 					'tmp/gallery.js' : ['public/gallery/gallery.module.js', 'public/gallery/gallery.controller.js',  'public/gallery/gallery.component.js'],
 					'tmp/prices.js' : ['public/prices/prices.module.js', 'public/prices/prices.controller.js',  'public/prices/prices.component.js'],
 					'tmp/main.js' : ['public/main/main.module.js', 'public/main/main.controller.js',  'public/main/main.component.js']
@@ -121,7 +121,7 @@ module.exports = function (grunt) {
 		copy: {
 			main:{
 				expand: true,
-				src: ['public/fonts/*','routers/*', 'api/**', 'etc/*', 'utils/*', 'app.js', 'server.js', 'public/bower_components/ngmap/build/scripts/ng-map.min.js', 'public/bower_components/parallax.js/parallax.min.js', 'public/css/*'],
+				src: ['public/loaders/*','public/fonts/*','routers/*', 'api/**', 'etc/*', 'utils/*', 'app.js', 'server.js', 'public/bower_components/ngmap/build/scripts/ng-map.min.js', 'public/bower_components/parallax.js/parallax.min.js', 'public/css/*'],
 				dest: 'dist/'
 			}
 

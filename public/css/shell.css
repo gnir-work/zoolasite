@@ -19,6 +19,17 @@ bold{
     src: url('fonts/Casual-Regular.ttf');
 }
 
+/*Loader*/
+.main-loader{
+    text-align: center;
+    font-family: Casual, 'cursive';
+    margin-top: 20vh;
+}
+
+.content{
+    opacity: 0;
+}
+
 /*Carousel*/
 #myCarousel img{
     height: 85vh;

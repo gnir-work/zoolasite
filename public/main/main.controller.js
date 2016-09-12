@@ -40,17 +40,6 @@ angular.module('mainPage').
         }
 
         //Center praise text
-        // $('.praise-text').css('padding-top',$('.praise-text').height()/5 );
-        // if($(window).width() < 900){
-        //     $('.praise-text').css('padding-top',$('.praise-text').height()/7 );
-        //     $('.praise-right').css('padding-top',$('.praise-text').height()/4 );
-        // }
-        //
-        // if($(window).width() < 530){
-        //     $('.praise-text').css('padding-top',$('.praise-text').height()/3 );
-        //     $('.praise-right').css('padding-top',$('.praise-text').height()/2 );
-        // }
-
         var margin = $('.praise-text').height() - $('.praise-text p').height();
         $('.praise-text').css('padding-top',margin/2 );
 
@@ -58,7 +47,9 @@ angular.module('mainPage').
         var numOfCircles = Math.round(($('.scissor-connection').width() - circleWidth * 6) / circleWidth) / 2;
         for(var i = 0; i < numOfCircles; i++)
             $('.scissor-connection').append('<i class="fa fa-circle"> </i>')
-            $('.scissor-connection').append('<i class="fa fa-circle last-dot"> </i>')
+        $('.scissor-connection').append('<i class="fa fa-circle last-dot"> </i>')
+
+
     });
 
 

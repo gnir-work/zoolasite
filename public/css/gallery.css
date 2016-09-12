@@ -39,6 +39,7 @@
 }
 
 .image-container img{
+    cursor: zoom-in;
     height: 35vh;
     min-width: 15vw;
     min-height: 200px;
