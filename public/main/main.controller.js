@@ -37,22 +37,18 @@ angular.module('mainPage').
         //Center scissor connection
         if($(window).width() > 1200) {
             $('.scissor-connection').css('margin-top', $('.praise-text').height() / 2 - $('.fa-scissors').height());
+            var circleWidth = $('.fa-circle').width();
+            var numOfCircles = Math.round(($('.scissor-connection').width() - circleWidth * 6) / circleWidth) / 2;
+            for(var i = 0; i < numOfCircles - 1; i++)
+                $('.scissor-connection').append('<i class="fa fa-circle"> </i>')
+            $('.scissor-connection').append('<i class="fa fa-circle last-dot"> </i>')
         }
 
         //Center praise text
         var margin = $('.praise-text').height() - $('.praise-text p').height();
         $('.praise-text').css('padding-top',margin/2 );
 
-        var circleWidth = $('.fa-circle').width();
-        var numOfCircles = Math.round(($('.scissor-connection').width() - circleWidth * 6) / circleWidth) / 2;
-        for(var i = 0; i < numOfCircles - 1; i++)
-            $('.scissor-connection').append('<i class="fa fa-circle"> </i>')
-        $('.scissor-connection').append('<i class="fa fa-circle last-dot"> </i>')
-
-
     });
-
-
     //Workers code
     var workersData = [{
         src: 'images/nir.jpg',
@@ -88,13 +84,14 @@ angular.module('mainPage').
 
     //Scrolling
     var scrollTo = function(element){
+        console.log('elements is + ' + element);
         $('html, body').stop().animate({
             scrollTop: element.offset().top - $('.nav').height() + 10
         }, 'slow');
     };
 
     var elementName = $location.search().scroll;
-    if(elementName) {
+    if(elementName ) {
         scrollTo($(elementName));
     }
     

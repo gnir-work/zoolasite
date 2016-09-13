@@ -16,7 +16,7 @@ bold{
 /*Fonts*/
 @font-face {
     font-family: 'Casual';
-    src: url('fonts/Casual-Regular.ttf');
+    src: url('../fonts/Casual-Regular.ttf');
 }
 
 /*Loader*/
