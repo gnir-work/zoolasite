@@ -1,6 +1,7 @@
 var express = require('express');
 var path = require('path');
 var app = express();
+var favicon = require('serve-favicon');
 
 app.set('view engine', 'ejs');
 app.set('port', (process.env.PORT || 9000));
@@ -14,9 +15,11 @@ app.use('/admin', require('./routers/admin'));
 
 app.use('/insta', require('./routers/instagram'));
 
-// app.get('*', function(req, res){
-//     res.redirect('/');
-// });
+app.use(favicon(path.join(__dirname, 'public', 'favicon', 'favicon.ico')));
+
+app.get('*', function(req, res){
+    res.redirect('/');
+});
 
 
 module.exports = app;
