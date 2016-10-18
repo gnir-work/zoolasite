@@ -11,12 +11,32 @@
                 A Little About Us
             </h1>
             <p>
-                <i class="fa fa-scissors"></i> We are a warm little hair salon in Vaughn, Ontario. just changed locations,
-                but dont be mistaken
-                we have a long history behind us - <bold> 11 Years </bold> - and with all those years we learned a lot,
-                made mistakes and more important than anything earned a lot of new clients that became like family!
+                <i class="fa fa-scissors"></i>
+                “Zoola” Salon first opened in 2005. Ever since, our main purpose was (and still
+
+                is) to create a “Zoola” - a warm and cozy environment for every hair loving
+
+                individual to come and enjoy.  With 11 years of experience, we are constantly
+
+                evolving, discovering new products and new techniques to improve our clients’
+
+                experience from the moment they set foot in the salon. </br>
+
+                Excellent customer service is our number one priority and we do everything in
+
+                our power to ensure our clients leave the salon happy and in love with their new
+
+                hair style!
 
 
+            </p>
+            <h3>
+                The name “Zoola” and its meaning
+            </h3>
+            <p>
+                The word “Zoola” describes the sort of atmosphere or place where you are
+
+                happiest, relaxed and most comfortable (http://www.urbandictionary.com)
             </p>
         </div>
     </div>
@@ -42,7 +62,7 @@
                 <div class="worker-profile" ng-repeat="worker in workers">
                     <div class="col-lg-{{12 / workers.length}} col-sm-6">
                         <img src={{worker.src}} alt="worker profile"/>
-                        <h2>Julia Jacob  </h2>
+                        <h2> {{worker.name}} </h2>
                         <p>
                             {{ worker.description }}
                         </p>

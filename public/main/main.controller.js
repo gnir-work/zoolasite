@@ -50,15 +50,14 @@ angular.module('mainPage').
 
     });
     //Workers code
-    var workersData = [{
-        src: 'images/nir.jpg',
-        description: 'Townscape anapaestic schizophyceous exopoditic preabstract lamest aoristically homostylism. Rehospitalize undeducible erasability nunciata unlethargical snakemouth dethrone norton. Ceding unmagnetized melinite unmediated overpunishment acanthopterygian decoloriser weaponless. Subgular scrabble insatiably sociological polymerize kathleen enquiry seadog. Pisay crimple screeching computerize maintop seer dagoba bifilar.'
-    }, {
+    var workersData = [ {
+        name:'Gil Jacob - Owner',
         src: 'images/gil.jpg',
-        description: 'Townscape anapaestic schizophyceous exopoditic preabstract lamest aoristically homostylism. Rehospitalize undeducible erasability nunciata unlethargical snakemouth dethrone norton. Ceding unmagnetized melinite unmediated overpunishment acanthopterygian decoloriser weaponless. Subgular scrabble insatiably sociological polymerize kathleen enquiry seadog. Pisay crimple screeching computerize maintop seer dagoba bifilar.'
+        description: 'Gil is always the first to greet you with a smile when you enter the salon, making you feel comfortable and at ease. Gil first began his journey as a hair stylist when he was 14 years old, with his sister being his first client. He immediately realized his passion for the craft and was already working as an assistant at a hair salon by the age of 16! Through hard work and dedication Gil was able to open “Zoola” salon 5 years later. In November 2016, the salon was relocated to a new, renovated and larger location, as a result of the growing success of the business. Gil takes pride of his salon as it is the product of many years of dedication and hard work.'
     }, {
-        src: 'images/alina.jpg',
-        description: 'Townscape anapaestic schizophyceous exopoditic preabstract lamest aoristically homostylism. Rehospitalize undeducible erasability nunciata unlethargical snakemouth dethrone norton. Ceding unmagnetized melinite unmediated overpunishment acanthopterygian decoloriser weaponless. Subgular scrabble insatiably sociological polymerize kathleen enquiry seadog. Pisay crimple screeching computerize maintop seer dagoba bifilar.'
+        name:'Iyar - Stylist',
+        src: 'images/iyar.jpg',
+        description: 'Iyar was always passionate for the beauty industry, since joining “Zoola” salon she has expanded her vast array of skills. At only 20 years old, through a great deal of practice Iyar became our youngest stylist, just under a year after joining.'
     }];
 
     //Set workers layout

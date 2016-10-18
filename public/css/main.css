@@ -27,6 +27,11 @@
     font-weight: 600;
 }
 
+#about h3{
+    color: darkred;
+    font-weight: 600;
+}
+
 #about p{
     font-size: 1.3em;
 }
@@ -81,7 +86,7 @@
 .worker-profile p{
     margin: auto;
     width: 80%;
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 /*Praise*/
