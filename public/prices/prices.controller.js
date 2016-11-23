@@ -5,7 +5,7 @@ angular.module('prices').
 
         this.cuts = [{
             cut: 'Blow Dry',
-            price: '30'
+            price: "30"
         },{
             cut: 'Men’s Cut',
             price: '25'

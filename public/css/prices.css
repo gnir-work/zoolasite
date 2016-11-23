@@ -76,7 +76,7 @@
 }
 
 .prices-table td {
-    font-family: Casual;
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     max-width:200px;
     overflow:hidden;
     white-space:nowrap;
