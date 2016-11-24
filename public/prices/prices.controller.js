@@ -7,8 +7,14 @@ angular.module('prices').
             cut: 'Blow Dry',
             price: "30+"
         },{
+            cut: 'Blow Dry-Junior Stylist',
+            price: "20+"
+        },{
             cut: 'Men’s Cut',
-            price: '25+'
+            price: '25'
+        },{
+            cut: 'Men’s Cut-Junior Stylist',
+            price: '20'
         },{
             cut: 'Women’s Cut',
             price: '45+'
@@ -43,7 +49,13 @@ angular.module('prices').
             cut: 'Boy’s Cut',
             price: '20'
         },{
+            cut: 'Boy’s Cut-Junior Stylist',
+            price: '15'
+        },{
             cut: 'Girl’s Cut',
             price: '35'
+        },{
+            cut: 'Girl’s Cut-Junior Stylist',
+            price: '25'
         }];
 });
