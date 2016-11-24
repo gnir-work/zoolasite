@@ -169,6 +169,11 @@
     color: #D75813;
 }
 
+.important.link{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 /*Subscribe*/
 .subscribe-header{
     margin-top:25px;

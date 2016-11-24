@@ -5,13 +5,11 @@ angular.module('mainPage').
 
     //Setting controller scope
     var controller = this;
+    controller.isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-    $scope.googleMapsUrl="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQG895e-uvGCZE2GSbwLWCIeqbyih9imI";
     //google map
+    $scope.googleMapsUrl="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQG895e-uvGCZE2GSbwLWCIeqbyih9imI";
     NgMap.getMap().then(function(map) {
-        console.log(map.getCenter());
-        console.log('markers', map.markers);
-        console.log('shapes', map.shapes);
     });
 
     //Parallax code
@@ -31,7 +29,6 @@ angular.module('mainPage').
 
     });
 
-    controller.test = 'test';
     controller.numOfCircles = 3;
     angular.element(document).ready(function () {
         //Center scissor connection
@@ -64,14 +61,12 @@ angular.module('mainPage').
     var workersPerRow = 3;
     if(workersData.length % 3 == 1)
         workersPerRow = 2;
-    console.log(workersPerRow);
     controller.workersRows = [];
     var tmpRow = [];
 
     for(var i = 1; i <= workersData.length; i++){
         tmpRow.push(workersData[i - 1]);
         if(i % workersPerRow == 0) {
-            console.log(i);
             controller.workersRows.push(tmpRow);
             tmpRow = []
         }
@@ -83,7 +78,6 @@ angular.module('mainPage').
 
     //Scrolling
     var scrollTo = function(element){
-        console.log('elements is + ' + element);
         $('html, body').stop().animate({
             scrollTop: element.offset().top - $('.nav').height() + 10
         }, 'slow');

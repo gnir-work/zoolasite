@@ -140,10 +140,22 @@
                     <h1>We would love to be your hair salon of choice</h1>
                 </div>
                 <p>
-                    Gil's Zoola salon is located at,  <bold class="important"> Unit 5, 30 Rivermede Rd, Vaughan, ON L4K 3N3.</bold>
+                    Gil's Zoola salon is located at,
+                    <a href="https://goo.gl/maps/6KfhVUbkx5p">
+                        <bold class="important link"> Unit 5, 30 Rivermede Rd, Vaughan, ON L4K 3N3.</bold>
+                    </a>
                     <br/> Its a lovely and warm place that always welcomes new guests and friends into the family.
                     <br>
-                    Call Zoola salon today at, <span class="important" id="phone">  (416) 887-7747 </span> and join the family!
+                    Call Zoola salon today at,
+                    <span class="important" ng-if="!$ctrl.isMobile">
+                        (416) 887-7747
+                    </span>
+                    <a href="tel:+1(416)8877747" ng-if="$ctrl.isMobile">
+                        <span class="important  link">
+                            (416) 887-7747
+                        </span>
+                    </a>
+                    and join the family!
                     <br>
                 </p>
                 <br/>
