@@ -121,7 +121,7 @@ module.exports = function (grunt) {
 		copy: {
 			main:{
 				expand: true,
-				src: ['public/favicon/*', 'public/loaders/*','public/fonts/*','routers/*', 'api/**', 'etc/*', 'utils/*', 'app.js', 'server.js', 'public/bower_components/ngmap/build/scripts/ng-map.min.js', 'public/bower_components/parallax.js/parallax.min.js', 'public/css/*'],
+				src: ['public/favicon/*', 'public/loaders/*','public/fonts/*','routers/*', 'api/**', 'etc/*', 'utils/*', 'app.js', 'server.js', 'public/googleca8615570774df01.html', 'public/bower_components/ngmap/build/scripts/ng-map.min.js', 'public/bower_components/parallax.js/parallax.min.js', 'public/css/*'],
 				dest: 'dist/'
 			}
 
