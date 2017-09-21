@@ -57,15 +57,16 @@
     </div>
     <div class="row">
         <div class="team-content">
-
-            <div class="row" ng-repeat="workers in $ctrl.workersRows">
-                <div class="worker-profile" ng-repeat="worker in workers">
-                    <div class="col-lg-{{12 / workers.length}} col-sm-6">
-                        <img src={{worker.src}} alt="worker profile"/>
-                        <h2> {{worker.name}} </h2>
-                        <p>
-                            {{ worker.description }}
-                        </p>
+            <div class="container-fluid">
+                <div class="row" ng-repeat="workers in $ctrl.workersRows">
+                    <div class="worker-profile" ng-repeat="worker in workers">
+                        <div class="col-lg-{{12 / workers.length}} col-sm-6">
+                            <img src={{worker.src}} alt="worker profile"/>
+                            <h2> {{worker.name}} </h2>
+                            <p>
+                                {{ worker.description }}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
