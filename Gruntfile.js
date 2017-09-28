@@ -66,6 +66,7 @@ module.exports = function (grunt) {
 			},
 			app: {
 				files: {
+					'tmp/login.js': ['public/login/login.js'],
 					'tmp/app.js' : ['public/app.module.js', 'public/app.config.js',  'public/app.controller.js'],
 					'tmp/gallery.js' : ['public/gallery/gallery.module.js', 'public/gallery/gallery.controller.js',  'public/gallery/gallery.component.js'],
 					'tmp/prices.js' : ['public/prices/prices.module.js', 'public/prices/prices.controller.js',  'public/prices/prices.component.js'],
@@ -97,6 +98,7 @@ module.exports = function (grunt) {
 		processhtml: {
 			dist: {
 				files: {
+					'tmp/login.ejs': ['views/login.ejs'],
 					'tmp/index.ejs' : ['views/index.ejs'],
 					'tmp/gallery-page.html' : ['public/gallery/gallery-page.html'],
 					'tmp/prices-page.html' : ['public/prices/prices-page.html'],
@@ -111,6 +113,7 @@ module.exports = function (grunt) {
 					collapseWhitespace: true
 				},
 				files: {                                   // Dictionary of files
+					'dist/views/login.ejs': 'tmp/login.ejs',
 					'dist/views/index.ejs': 'tmp/index.ejs',     // 'destination': 'source'
 					'dist/public/gallery/gallery-page.html': 'tmp/gallery-page.html',
 					'dist/public/prices/prices-page.html': 'tmp/prices-page.html',
@@ -121,7 +124,7 @@ module.exports = function (grunt) {
 		copy: {
 			main:{
 				expand: true,
-				src: ['public/favicon/*', 'public/loaders/*','public/fonts/*','routers/*', 'api/**', 'etc/*', 'utils/*', 'app.js', 'server.js', 'public/googleca8615570774df01.html', 'public/bower_components/ngmap/build/scripts/ng-map.min.js', 'public/bower_components/parallax.js/parallax.min.js', 'public/css/*'],
+				src: ['public/favicon/*', 'public/loaders/*','public/fonts/*','routers/*', 'api/**', 'etc/*', 'utils/*', 'config/*', 'app.js', 'server.js', 'public/googleca8615570774df01.html', 'public/bower_components/ngmap/build/scripts/ng-map.min.js', 'public/bower_components/parallax.js/parallax.min.js', 'public/css/*'],
 				dest: 'dist/'
 			}
 
