@@ -44,7 +44,7 @@ module.exports = function (grunt) {
 		}, open:{
 			dev: {
 				path:'http://127.0.0.1:9000',
-				app: 'iceweasel'
+				app: 'chrome'
 			}
 		},
 		imagemin: {
@@ -66,6 +66,7 @@ module.exports = function (grunt) {
 			},
 			app: {
 				files: {
+					'tmp/core.js': ['public/core/core.module.js', 'public/core/resource_svc'],
 					'tmp/login.js': ['public/login/login.js'],
 					'tmp/app.js' : ['public/app.module.js', 'public/app.config.js',  'public/app.controller.js'],
 					'tmp/gallery.js' : ['public/gallery/gallery.module.js', 'public/gallery/gallery.controller.js',  'public/gallery/gallery.component.js'],
