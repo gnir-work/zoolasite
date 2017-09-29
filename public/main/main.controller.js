@@ -1,5 +1,5 @@
 //Main page component
-angular.module('mainPage').controller('mainPageController', function ($scope, $location, NgMap, $http, $timeout) {
+angular.module('mainPage').controller('mainPageController', function ($scope, $location, NgMap, $http, $timeout, resourceService) {
 
     //Setting controller scope
     var controller = this;
@@ -11,12 +11,7 @@ angular.module('mainPage').controller('mainPageController', function ($scope, $l
     });
 
     //Parallax code
-    controller.parallaxImages = [
-        'images/zoola_parallax2.jpg',
-        'images/zoola_inside.jpg',
-        'images/parallax2.jpg'
-    ];
-
+    controller.parallaxData = resourceService.loaded.parallaxData;
 
     controller.numOfCircles = 3;
     angular.element(document).ready(function () {
