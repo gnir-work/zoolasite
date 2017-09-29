@@ -13,23 +13,6 @@ angular.module('mainPage').controller('mainPageController', function ($scope, $l
     //Parallax code
     controller.parallaxData = resourceService.loaded.parallaxData;
 
-    controller.numOfCircles = 3;
-    angular.element(document).ready(function () {
-        //Center scissor connection
-        if ($(window).width() > 1200) {
-            $('.scissor-connection').css('margin-top', $('.praise-text').height() / 2 - $('.fa-scissors').height());
-            var circleWidth = $('.fa-circle').width();
-            var numOfCircles = Math.round(($('.scissor-connection').width() - circleWidth * 6) / circleWidth) / 2;
-            for (var i = 0; i < numOfCircles - 1; i++)
-                $('.scissor-connection').append('<i class="fa fa-circle"> </i>')
-            $('.scissor-connection').append('<i class="fa fa-circle last-dot"> </i>')
-        }
-
-        //Center praise text
-        var margin = $('.praise-text').height() - $('.praise-text p').height();
-        $('.praise-text').css('padding-top', margin / 2);
-
-    });
     //Workers code
     var workersData = [{
         name: 'Gil Jacob - Owner',

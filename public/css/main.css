@@ -1,10 +1,10 @@
 /*About*/
-#about-image-container{
+#about-image-container {
     text-align: center;
 
 }
 
-#about-image{
+#about-image {
     width: 32vw;
     height: 32vw;
     min-width: 350px;
@@ -12,56 +12,52 @@
     border-radius: 50%;
 }
 
-#about-container{
+#about-container {
     margin-top: 8vh;
     margin-bottom: 10vh;
 }
 
-
-#about{
+#about {
     padding-left: 5vw;
 }
 
-#about h1{
+#about h1 {
     color: darkred;
     font-weight: 600;
 }
 
-#about h3{
+#about h3 {
     color: darkred;
     font-weight: 600;
 }
 
-#about p{
+#about p {
     font-size: 1.3em;
 }
 
 /*Parallax*/
-.parallax-window{
-    margin:0;
+.parallax-window {
+    margin: 0;
     height: 22.5vw;
     background: transparent;
     min-height: 250px;
 
 }
 
-.parallax-window div{
+.parallax-window div {
     background-repeat: no-repeat !important;
     background-size: 120% 100% !important;
     background-position: center;
 }
 
-
-
 /*Meet the Team*/
-.team-container{
+.team-container {
     margin-top: 0;
     margin-bottom: 5vh;
     padding-top: 3vh;
 }
 
-
-.team-content{
+.team-content {
     margin-top: 2vw;
 
 }
@@ -71,7 +67,7 @@
     margin-bottom: 20px;
 }
 
-.worker-profile img{
+.worker-profile img {
     border-radius: 80%;
     width: 20vw;
     height: 20vw;
@@ -79,28 +75,28 @@
     min-height: 300px;
 }
 
-.worker-profile h2{
+.worker-profile h2 {
     text-align: center;
     color: #000;
 }
 
-.worker-profile p{
+.worker-profile p {
     margin: auto;
     width: 80%;
     font-size: 1.2em;
 }
 
 /*Praise*/
-.praise-container{
+.praise-container {
     margin-top: 0;
     margin-bottom: 30px;
 }
 
-.praise-content{
+.praise-content {
     height: 55vh;
 }
 
-.praise-text{
+.praise-text {
     height: 100%;
     background-image: url('../images/soft_kill.png');
     border-radius: 10%;
@@ -109,35 +105,40 @@
     color: white;
     font-size: 1.3em;
     font-family: 'Lobster', cursive;
+    display: flex;
+    place-items: center;
 }
 
-.signature{
+.signature {
     margin-bottom: 10px;
 }
 
-.scissor-connection{
+.scissor-connection {
     color: #000;
+    height: 100%;
+    display: flex;
+    place-items: center;
 }
 
-.fa-circle{
+.fa-circle {
     margin-left: 3px;
 }
 
-.text-danger{
+.text-danger {
     margin-top: 5px;
     margin-bottom: 0;
     font-family: Casual;
     font-weight: bold;
 }
 
-.alert{
+.alert {
     font-weight: bold;
     font-family: Casual;
     text-align: center;
 }
 
 /*Contact*/
-.contact-container{
+.contact-container {
     margin-top: 5vh;
     margin-bottom: 10vh;
     height: 75vh;
@@ -150,7 +151,7 @@
 }
 
 /*Contact map*/
-.map-container{
+.map-container {
     padding: 0;
 }
 
@@ -159,183 +160,183 @@
     margin-top: 25px;
 }
 
-
-.contact-text{
+.contact-text {
     font-size: 1.15em;
     text-align: left;
 }
 
-.important{
+.important {
     font-size: 1.2em;
     color: #D75813;
 }
 
-.important.link{
+.important.link {
     text-decoration: underline;
     cursor: pointer;
 }
 
 /*Subscribe*/
-.subscribe-header{
-    margin-top:25px;
+.subscribe-header {
+    margin-top: 25px;
     width: 90%;
 
 }
 
-.fa-phone{
+.fa-phone {
     margin-right: 4px;
 }
 
-
-
-.subscribe-submit{
+.subscribe-submit {
     padding-top: 15px;
     text-align: center;
 }
 
-
 /*Footer*/
-.footer-container{
+.footer-container {
     padding-left: 8vh;
     padding-right: 8vh;
     background: #1C1F24;
-    color:whitesmoke;
+    color: whitesmoke;
     font-size: 1.4em;
 }
 
 /*Phone compatibility*/
 
 @media (max-width: 1320px) {
-    .last-dot{
-        color:white;
+    .last-dot {
+        color: white;
     }
 
-    #map{
+    #map {
         margin-top: 40px;
     }
 }
 
-
-
 @media (max-width: 1200px) {
-    .scissor-connection{
-        color:white;
+    .scissor-connection {
+        color: white;
         display: none;
     }
 
-    .praise-container{
+    .praise-container {
         text-align: center;
     }
 
-    .praise-row{
+    .praise-row {
         height: 120vh;
 
     }
 
-    .praise-text{
+    .praise-text {
         margin: auto;
         margin-bottom: 25px;
         width: 50vw;
     }
 
-    #map{
+    #map {
         margin-top: 50px;
     }
 
 }
 
 @media (max-width: 1000px) {
-    .contact-text{
+    .contact-text {
         width: 80vw;
         margin: auto;
     }
 
-    #map{
-        margin:0;
+    #map {
+        margin: 0;
     }
 
-    .section-header{
+    .section-header {
         width: 70%;
     }
 
-    .subscribe-email{
-        margin-bottom: 15px ;
+    .subscribe-email {
+        margin-bottom: 15px;
     }
 }
 
 @media (max-width: 780px) {
 
     /*Meet the team*/
-    .worker-profile img{
+    .worker-profile img {
         min-width: 250px;
         min-height: 250px;
     }
 
     /*Praise*/
-    .praise-text{
+    .praise-row {
+        height: 95vh;
+    }
+
+    .praise-text {
         width: 60vw;
         font-size: 1.2em;
+        height: 350px;
     }
 
     /*Contact*/
-    .contact-container, #map{
+    .contact-container, #map {
         margin-top: 15px;
     }
 
-    #map{
+    #map {
         height: 50vh;
     }
 
 }
 
 @media (max-width: 530px) {
-    .praise-text{
+    .praise-text {
         font-size: 1.1em;
     }
 
 }
 
-@media (max-width: 480px){
+@media (max-width: 480px) {
 
     /*About*/
-    #about-container{
+    #about-container {
         margin-top: 5vh;
         margin-bottom: 5vw;
     }
 
-    #about-image{
+    #about-image {
         min-width: 250px;
         min-height: 250px;
-        margin:auto;
+        margin: auto;
     }
 
-    .section-header h1{
+    .section-header h1 {
         font-size: 1.8em;
     }
 
     /*Parallax*/
-    .parallax-window{
+    .parallax-window {
         display: none;
     }
 
     /*Team*/
-    .team-container, #about-container{
+    .team-container, #about-container {
         margin-bottom: 0px;
     }
-    .praise-content{
+
+    .praise-content {
         max-height: 55vh;
-        width:85vw;
+        width: 85vw;
         margin: auto;
     }
 
-    .praise-text{
+    .praise-text {
         width: 85vw;
         border-radius: 22.5%;
         font-size: 1.1em;
         margin-bottom: 20px;
     }
 
-    .contact-header{
+    .contact-header {
         width: 100%;
     }
 
