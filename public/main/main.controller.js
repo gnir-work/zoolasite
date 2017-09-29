@@ -12,7 +12,7 @@ angular.module('mainPage').controller('mainPageController', function ($scope, $l
 
     //Parallax code
     controller.parallaxData = resourceService.loaded.parallaxData;
-
+    controller.praisesData = resourceService.loaded.praisesData;
     //Workers code
     var workersData = [{
         name: 'Gil Jacob - Owner',
