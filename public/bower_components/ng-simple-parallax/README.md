@@ -1,7 +1,8 @@
 # ng-parallax
+[![CDNJS](https://img.shields.io/cdnjs/v/ng-parallax.svg)](https://cdnjs.com/libraries/ng-parallax)
 
-### NEW!
-There is now an [Angular2 directive](https://github.com/allenRoyston/ng2-parallax "Angular2 directive") available for those interested!
+### Ng2 Version
+There is a [Angular2 directive](https://github.com/allenRoyston/ng2-parallax "Angular2 directive"), but I haven't really been vigiliant about updating it.  (I'm only one person - sorry).
 
 ### What Am I?!
 An easy way to implement parallax scrolling with Angularjs.  
@@ -18,9 +19,11 @@ An easy way to implement parallax scrolling with Angularjs.
 </code>
 
 ### Version
-1.1.2
+1.1.3
 
 ### Updates
+ - v1.1.3 - Merged changes from emelent.
+ - v1.1.3 - Added support for use in Webpack/ComponentJS
  - v1.1.2 - Eliminated jankiness when using Macbook touchpads and touchscreens.
 
 ### Live Demo 
@@ -42,13 +45,15 @@ bower install ng-simple-parallax --save
 ### Installation
 Include the module in your scripts.<br>
 <code>
-&lt;script src="./js/ngParallax.min.js"&gt; &lt;script&gt;
+&lt;script src="./src/ngParallax.min.js"&gt; &lt;script&gt;
 </code>
 
 Add ngParallax in your apps dependencies.<br> 
 <code>
 var app = angular.module('myApp', ['ngParallax']);
 </code>
+
+or include just like any other component in Webpack
 
 
 ### Parameters

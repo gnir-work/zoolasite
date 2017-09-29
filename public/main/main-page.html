@@ -1,10 +1,10 @@
-<link href="css/main.css" rel="stylesheet" />
+<link href="css/main.css" rel="stylesheet"/>
 
 <!--About-->
 <div class="container-fluid " id="about-container">
     <div class="row">
         <div class='col-lg-4 col-lg-offset-1 ' id="about-image-container">
-            <img  id="about-image" src="images/aboutImage2.jpg" alt="banner">
+            <img id="about-image" src="images/aboutImage2.jpg" alt="banner">
         </div>
         <div id="about" class="col-lg-6">
             <h1>
@@ -16,7 +16,7 @@
 
                 is) to create a “Zoola” - a warm and cozy environment for every hair loving
 
-                individual to come and enjoy.  With 11 years of experience, we are constantly
+                individual to come and enjoy. With 11 years of experience, we are constantly
 
                 evolving, discovering new products and new techniques to improve our clients’
 
@@ -44,14 +44,16 @@
 </div>
 
 <!--Parallax-->
-<div class="parallax-window" data-parallax="scroll" id="firstParallax"></div>
-
+<div class="parallax-window">
+    <div ng-parallax pattern="$ctrl.parallaxImages[0]" speed="0">
+    </div>
+</div>
 <!--Team-->
 <div class="container-fluid team-container">
     <div class="row">
         <div class="section-header">
             <hr>
-            <h1><i class="fa fa-scissors"></i> Meet the Experts <i class="fa fa-scissors"></i>  </h1>
+            <h1><i class="fa fa-scissors"></i> Meet the Experts <i class="fa fa-scissors"></i></h1>
             <hr>
         </div>
     </div>
@@ -77,7 +79,10 @@
 </div>
 
 <!--Parallax-->
-<div class="parallax-window" data-parallax="scroll" id="secondParallax"></div>
+<div class="parallax-window">
+    <div ng-parallax pattern="$ctrl.parallaxImages[1]" speed="0">
+    </div>
+</div>
 
 <!--Praise-->
 <div class="container-fluid praise-container">
@@ -92,7 +97,10 @@
         <div class="praise-content">
             <div class="praise-text col-lg-4 col-lg-offset-1">
                 <p>
-                    I have been going to Gil and Linda for over four years. They recently moved to a much more spacious salon and thus will be adding esthetics services as well. Gil and Linda are perfectionists, every time I go there my hair is perfect whether it is highlights, colour, cuts and blow drys. I travel over an hour, each way, to get to them because they are worth it. You won't be disappointed.
+                    I have been going to Gil and Linda for over four years. They recently moved to a much more spacious
+                    salon and thus will be adding esthetics services as well. Gil and Linda are perfectionists, every
+                    time I go there my hair is perfect whether it is highlights, colour, cuts and blow drys. I travel
+                    over an hour, each way, to get to them because they are worth it. You won't be disappointed.
                 </p>
                 <div class="signature" style="text-align: right">
                     <p> From, Becca A. </p>
@@ -104,9 +112,11 @@
                 <i class="fa fa-circle"> </i>
                 <i class="fa fa-scissors fa-3x" style="position: relative; top: 8px"> </i>
             </div>
-            <div class="praise-text praise-right col-lg-4 " >
+            <div class="praise-text praise-right col-lg-4 ">
                 <p>
-                    Gil is an amazing hairdresser. He has the skill and vision to cut your hair which ever way you want. I have been going to the same guy for the last 13 years. I was convinced by my friends to try Gil out and have been going to him ever since. Always does an amazing job and stays consistent.
+                    Gil is an amazing hairdresser. He has the skill and vision to cut your hair which ever way you want.
+                    I have been going to the same guy for the last 13 years. I was convinced by my friends to try Gil
+                    out and have been going to him ever since. Always does an amazing job and stays consistent.
                 </p>
                 <div class="signature" style="text-align: right">
                     <p> From, Yoni D.</p>
@@ -117,18 +127,22 @@
 </div>
 
 <!--Parallax-->
-<div class="parallax-window" data-parallax="scroll" id="thirdParallax"></div>
+<div class="parallax-window">
+    <div ng-parallax pattern="$ctrl.parallaxImages[2]" speed="0">
+    </div>
+</div>
 
 <!--Contact-->
 <div class="container-fluid contact-container">
 
     <div class="row">
         <div class="contact-content">
-            <div class="map-container col-md-5 col-md-offset-1" >
+            <div class="map-container col-md-5 col-md-offset-1">
 
-                <div id="map"  map-lazy-load="https://maps.google.com/maps/api/js"
+                <div id="map" map-lazy-load="https://maps.google.com/maps/api/js"
                      map-lazy-load-params="{{googleMapsUrl}}">
-                    <ng-map center="43.812050,-79.482729" zoom="17" style="width: 100%; height: 100%" styles='[{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]'>
+                    <ng-map center="43.812050,-79.482729" zoom="17" style="width: 100%; height: 100%"
+                            styles='[{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]'>
                         <marker position="43.812050,-79.482729" title="Gil Zoola Salon"></marker>
                     </ng-map>
                 </div>
@@ -166,11 +180,16 @@
                     Subscribe now using your your email <i class="fa fa-envelope"></i>
                     and get Exclusive deals and offers for you and your family!
                 </p>
-                <form class="form-horizontal" name="subscribeForm" ng-submit="$ctrl.subscribe(subscribeForm.$valid)" id="subscribeForm" novalidate>
+                <form class="form-horizontal" name="subscribeForm" ng-submit="$ctrl.subscribe(subscribeForm.$valid)"
+                      id="subscribeForm" novalidate>
                     <div class="form-group">
-                        <div class="col-lg-10 col-lg-offset-1 subscribe-email " >
-                            <input type='email' class="form-control " ng-model="email" name="email" placeholder="enter mail here" required>
-                            <div class="text-danger" ng-show="subscribeForm.email.$viewValue.length && subscribeForm.email.$invalid && subscribeForm.email.$touched && !subscribeForm.email.$pristine && subscribeForm.$invalid " class="help-block">Please enter a valid email or delete current one.</div>
+                        <div class="col-lg-10 col-lg-offset-1 subscribe-email ">
+                            <input type='email' class="form-control " ng-model="email" name="email"
+                                   placeholder="enter mail here" required>
+                            <div class="text-danger"
+                                 ng-show="subscribeForm.email.$viewValue.length && subscribeForm.email.$invalid && subscribeForm.email.$touched && !subscribeForm.email.$pristine && subscribeForm.$invalid "
+                                 class="help-block">Please enter a valid email or delete current one.
+                            </div>
                         </div>
 
                     </div>
@@ -183,7 +202,8 @@
                     </div>
 
                     <div class="form-group subscribe-submit">
-                        <input type="submit" ng-disabled="subscribeForm.$invalid" class="btn btn-lg btn-success"  value="Subscribe and enjoy!">
+                        <input type="submit" ng-disabled="subscribeForm.$invalid" class="btn btn-lg btn-success"
+                               value="Subscribe and enjoy!">
                     </div>
 
                 </form>

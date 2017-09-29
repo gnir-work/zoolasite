@@ -45,9 +45,10 @@
 
 }
 
-.parallax-window img{
-    max-height: 100%;
-    width: 100%;
+.parallax-window div{
+    background-repeat: no-repeat !important;
+    background-size: 120% 100% !important;
+    background-position: center;
 }
 
 

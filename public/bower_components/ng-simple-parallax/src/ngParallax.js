@@ -1,5 +1,9 @@
 'use strict';
-angular.module('ngParallax', []).directive('ngParallax', [
+if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.exports === exports) {
+  module.exports = 'ngParallax';
+}
+angular.module('ngParallax',[]);
+angular.module('ngParallax').directive('ngParallax', [
   '$timeout',
   function ($window, $timeout) {
     return {
@@ -11,29 +15,24 @@ angular.module('ngParallax', []).directive('ngParallax', [
         link: function(scope, elem, attr) {
 
           window.mobileAndTabletcheck = function() {
-            if( navigator.userAgent.match(/Android/i)
+            return( navigator.userAgent.match(/Android/i)
              || navigator.userAgent.match(/webOS/i)
              || navigator.userAgent.match(/iPhone/i)
              || navigator.userAgent.match(/iPad/i)
              || navigator.userAgent.match(/iPod/i)
              || navigator.userAgent.match(/BlackBerry/i)
              || navigator.userAgent.match(/Windows Phone/i)
-             ){
-              return true
-             }
-             else{
-              return false;
-            }
-          }
+             );
+          };
 
           var bgObj = elem[0];
-              bgObj.style.backgroundRepeat = "repeat";
-              bgObj.style.backgroundAttachment = "fixed";
               bgObj.style.height = "100%";
-              bgObj.style.margin = "0 auto"
-              bgObj.style.position = "relative"
-              bgObj.style.background = "url(" + scope.pattern + ")"
+              bgObj.style.margin = "0 auto";
+              bgObj.style.position = "relative";
+              bgObj.style.background = "url(" + scope.pattern + ")";
               bgObj.style.backgroundAttachment = 'fixed';
+              bgObj.style.backgroundRepeat = "repeat";
+              bgObj.style.backgroundSize = "cover";
           var isMobile = window.mobileAndTabletcheck();
 
 
@@ -51,12 +50,12 @@ angular.module('ngParallax', []).directive('ngParallax', [
                 bgObj.style.backgroundPosition = '0% '+ speed + '%';
               }
 
-          };
+          }
 
           // for mobile
           window.document.addEventListener("touchmove", function(){
               execute();
-          })
+          });
 
 
           // for browsers
@@ -66,7 +65,7 @@ angular.module('ngParallax', []).directive('ngParallax', [
 
           execute();
 
-        },
+        }
 
     };
   }
