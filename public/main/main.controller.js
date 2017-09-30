@@ -1,5 +1,6 @@
 //Main page component
-angular.module('mainPage').controller('mainPageController', function ($scope, $location, NgMap, $http, $timeout, resourceService) {
+angular.module('mainPage').controller('mainPageController',
+    function ($scope, $location, $anchorScroll, NgMap, $http, $timeout, resourceService) {
 
     //Setting controller scope
     var controller = this;
@@ -45,7 +46,8 @@ angular.module('mainPage').controller('mainPageController', function ($scope, $l
 
     var elementName = $location.search().scroll;
     if (elementName) {
-        scrollTo($(elementName));
+        console.log(elementName);
+        $anchorScroll($location.hash(elementName));
     }
 
     //subscribing
