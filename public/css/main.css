@@ -107,6 +107,7 @@
     font-family: 'Lobster', cursive;
     display: flex;
     place-items: center;
+    align-items: center;
 }
 
 .signature {
@@ -118,6 +119,7 @@
     height: 100%;
     display: flex;
     place-items: center;
+    align-items: center;
 }
 
 .fa-circle {
@@ -218,19 +220,20 @@
         display: none;
     }
 
+    .praise-content {
+        height: auto;
+    }
+
     .praise-container {
         text-align: center;
     }
 
-    .praise-row {
-        height: 120vh;
-
-    }
 
     .praise-text {
         margin: auto;
         margin-bottom: 25px;
         width: 50vw;
+        padding: 30px;
     }
 
     #map {
@@ -267,14 +270,9 @@
     }
 
     /*Praise*/
-    .praise-row {
-        height: 95vh;
-    }
-
     .praise-text {
         width: 60vw;
         font-size: 1.2em;
-        height: 350px;
     }
 
     /*Contact*/
@@ -324,7 +322,6 @@
     }
 
     .praise-content {
-        max-height: 55vh;
         width: 85vw;
         margin: auto;
     }
