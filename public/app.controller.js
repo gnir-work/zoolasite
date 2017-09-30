@@ -1,9 +1,10 @@
-
-angular.module('zoolaApp').
-    controller('zoolaController', function($scope){
+angular.module('zoolaApp').controller('zoolaController', function ($scope, resourceService) {
+    resourceService.doneLoadingCallbacks.push(function () {
+        //Hide loader
         angular.element(document).ready(function () {
-            //Hide loader
             $('.main-loader').hide();
             $('.content').css('opacity', '1');
         });
+
     });
+});

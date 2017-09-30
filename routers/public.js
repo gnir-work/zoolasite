@@ -10,6 +10,7 @@ router.get('/', function(req, res, next){
 router.put('/:email', function(req, res){
 
     var email = req.params.email;
+
     if(email == 'empty' || !email)
         email = null;
 
@@ -25,13 +26,22 @@ router.put('/:email', function(req, res){
 });
 
 //Unsubscribe
-router.get('unsubscribe/:method/:contactInfo', function(req, res){
+router.get('/unsubscribe/:method/:contactInfo', function(req, res){
     console.log('test');
     require('../api/subscription/unsubscribe')(req.params.method, req.params.contactInfo, function(err, output){
         if(err)
             return require('../utils/errHandler')(err, res);
         res.end(output);
     })
+});
+
+router.get('/loadPageData/', function(req, res){
+   require('../etc/loadJsonFile')('pageData.json', function(err, data){
+       if(err)
+           return require('../utils/errHandler')(err, res);
+       else
+           res.json(data);
+   })
 });
 
 module.exports = router;
