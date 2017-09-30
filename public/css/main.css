@@ -162,6 +162,10 @@
     margin-top: 25px;
 }
 
+ng-map {
+    height: 100% !important;
+}
+
 .contact-text {
     font-size: 1.15em;
     text-align: left;

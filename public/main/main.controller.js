@@ -14,12 +14,6 @@ angular.module('mainPage').controller('mainPageController',
         controller.test = "images/zoola_parallax2.jpg";
         //Parallax code
         controller.parallaxData = resourceService.static.parallaxData;
-        resourceService.getPageData(function (pageData) {
-            controller.praisesData = pageData.praisesData;
-            controller.aboutData = pageData.aboutData;
-            console.log(pageData.aboutData);
-            setWorkersLayout(pageData.workersData);
-        });
 
         // //Workers code
         const setWorkersLayout = function (workersData) {
@@ -69,7 +63,13 @@ angular.module('mainPage').controller('mainPageController',
                     }, 2300)
                 })
             }
-        }
+        };
 
-
+        //Load data from the server
+        resourceService.getPageData(function (pageData) {
+            controller.praisesData = pageData.praisesData;
+            controller.aboutData = pageData.aboutData;
+            console.log(pageData.aboutData);
+            setWorkersLayout(pageData.workersData);
+        });
     });
