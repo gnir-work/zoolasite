@@ -14,7 +14,7 @@
         <tr>
             <th><h1 class="firstHeading"> Hair Services </h1></th>
         </tr>
-        <tr ng-repeat="hairCut in $ctrl.cuts">
+        <tr ng-repeat="hairCut in $ctrl.cuts.data">
             <td>   {{hairCut.cut}} </td>
             <td class="price-cell"> {{hairCut.price}} <i class="fa fa-usd" aria-hidden="true"></i></td>
         </tr>

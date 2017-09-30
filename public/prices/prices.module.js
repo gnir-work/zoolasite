@@ -1,3 +1,3 @@
 
 //Prices module
-angular.module('prices',[]);
+angular.module('prices',['zoola.core']);
