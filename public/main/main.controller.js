@@ -35,15 +35,6 @@ angular.module('mainPage').controller('mainPageController',
 
 
     //Scrolling
-    var scrollTo = function (element) {
-        var offset = 0;
-        if (elementName == 'footer')
-            offset = 1000;
-        $('html, body').stop().animate({
-            scrollTop: element.offset().top - $('.nav').height() + 10 + offset
-        }, 'slow');
-    };
-
     var elementName = $location.search().scroll;
     if (elementName) {
         console.log(elementName);
