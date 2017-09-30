@@ -1,6 +1,6 @@
 
 module.exports = function(method, id, cb) {
-   require('../../etc/getSubscribers')(function(err, subscribers) {
+   require('../../etc/loadJsonFile')('subscribers.json', function(err, subscribers) {
        if(err)
            return cb(err);
        require('../../utils/contains')(subscribers[method], 'id', id, function(index){

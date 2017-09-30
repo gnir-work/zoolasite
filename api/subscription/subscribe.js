@@ -1,7 +1,7 @@
 var shortid = require('shortid');
 
 module.exports = function(info, cb) {
-    require('../../etc/getSubscribers')(function(err, subscribers){
+    require('../../etc/loadJsonFile')('subscribers.json', function(err, subscribers){
         if (err)
             return cb(err);
         if(info.email){
