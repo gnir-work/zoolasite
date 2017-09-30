@@ -66,12 +66,12 @@ module.exports = function (grunt) {
 			},
 			app: {
 				files: {
-					'tmp/core.js': ['public/core/core.module.js', 'public/core/resource_svc'],
+					'tmp/core.js': ['public/core/core.module.js', 'public/core/resource_svc.js'],
 					'tmp/login.js': ['public/login/login.js'],
 					'tmp/app.js' : ['public/app.module.js', 'public/app.config.js',  'public/app.controller.js'],
 					'tmp/gallery.js' : ['public/gallery/gallery.module.js', 'public/gallery/gallery.controller.js',  'public/gallery/gallery.component.js'],
 					'tmp/prices.js' : ['public/prices/prices.module.js', 'public/prices/prices.controller.js',  'public/prices/prices.component.js'],
-					'tmp/main.js' : ['public/main/main.module.js', 'public/main/main.controller.js',  'public/main/main.component.js']
+					'tmp/main.js' : ['public/main/main.module.js', 'public/main/main.controller.js',  'public/main/main.component.js', 'public/main/praise/praise_directive.js']
 				}
 			}
 
@@ -103,7 +103,8 @@ module.exports = function (grunt) {
 					'tmp/index.ejs' : ['views/index.ejs'],
 					'tmp/gallery-page.html' : ['public/gallery/gallery-page.html'],
 					'tmp/prices-page.html' : ['public/prices/prices-page.html'],
-					'tmp/main-page.html' : ['public/main/main-page.html']
+					'tmp/main-page.html' : ['public/main/main-page.html'],
+					'tmp/praise.html': ['public/main/praise/praise.html']
 				}
 			}
 		},
@@ -118,7 +119,8 @@ module.exports = function (grunt) {
 					'dist/views/index.ejs': 'tmp/index.ejs',     // 'destination': 'source'
 					'dist/public/gallery/gallery-page.html': 'tmp/gallery-page.html',
 					'dist/public/prices/prices-page.html': 'tmp/prices-page.html',
-					'dist/public/main/main-page.html': 'tmp/main-page.html'
+					'dist/public/main/main-page.html': 'tmp/main-page.html',
+					'dist/public/main/praise/praise.html': 'tmp/praise.html'
 				}
 			}
 		},
