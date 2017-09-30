@@ -47,20 +47,9 @@ angular.module('mainPage').controller('mainPageController',
                 var url = '/' + $scope.email;
                 $http.put(url).then(function Success(response) {
                     controller.subscribeSuccess = response.data.output;
-                    controller.showSubscribeSuccess = true;
-
-                    $timeout(function () {
-                        controller.subscribeSuccess = '';
-                        controller.showSubscribeSuccess = false;
-                    }, 3000)
+                    swal("Welcome to the family :)", response.data.output, 'success');
                 }, function Error(error) {
-                    controller.subscribeError = error.data.err;
-                    controller.showSubscribeError = true;
-
-                    $timeout(function () {
-                        controller.subscribeError = '';
-                        controller.showSubscribeError = false;
-                    }, 2300)
+                    swal("Couldn't subscribe you :(", error.data.err, 'error');
                 })
             }
         };
