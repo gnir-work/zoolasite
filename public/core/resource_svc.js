@@ -12,7 +12,7 @@ angular.module('zoola.core').factory('resourceService', ['$http', function ($htt
     };
     svc.getPageData = function (cb) {
         if (svc.loaded) {
-            cb(svc.loaded());
+            cb(svc.loaded);
         } else {
             $http.get('/loadPageData').then(function (response) {
                 svc.loaded = response.data;
