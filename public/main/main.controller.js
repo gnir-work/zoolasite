@@ -37,7 +37,6 @@ angular.module('mainPage').controller('mainPageController',
         //Scrolling
         var elementName = $location.search().scroll;
         if (elementName) {
-            console.log(elementName);
             $anchorScroll($location.hash(elementName));
         }
 
@@ -58,7 +57,6 @@ angular.module('mainPage').controller('mainPageController',
         resourceService.getPageData(function (pageData) {
             controller.praisesData = pageData.praisesData;
             controller.aboutData = pageData.aboutData;
-            console.log(pageData.aboutData);
             setWorkersLayout(pageData.workersData);
         });
     });

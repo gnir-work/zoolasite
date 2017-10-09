@@ -1,6 +1,5 @@
 function login() {
     $.post('/admin/login', {username: $("#username").val(), password: $("#password").val()}, function (data) {
-        console.log('success');
         window.location.href = "/admin/"
     }).fail(function (data) {
         messageContainer = $("#bad-login-message");
