@@ -79,7 +79,7 @@ module.exports = function (grunt) {
 		concat: {
 			js:{
 				src:['tmp/*.js'],
-				dest: 'tmp/costumeJs.js'
+				dest: 'dist/public/costumeJs.js'
 			}
 		},
 		uglify: {
@@ -136,14 +136,12 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('run',[
 		'express',
-		'open:dev',
 		'watch'
 	]);
 	grunt.registerTask('build',[
 		'imagemin',
 		'ngAnnotate',
 		'concat',
-		'uglify',
 		'processhtml',
 		'htmlmin',
 		'copy'

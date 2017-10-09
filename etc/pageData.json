@@ -29,11 +29,11 @@
     "data": [
       {
         "cut": "Blow Dry",
-        "price": "30+"
+        "price": "35+"
       },
       {
         "cut": "Blow Dry-Junior Stylist",
-        "price": "20+"
+        "price": "25+"
       },
       {
         "cut": "Men’s Cut",
@@ -53,23 +53,27 @@
       },
       {
         "cut": "Colour",
-        "price": "45+"
+        "price": "50+"
+      },
+      {
+        "cut": "Colour & Blow-Dry",
+        "price": "65+"
       },
       {
         "cut": "Colour & Cut",
-        "price": "70+"
+        "price": "75+"
       },
       {
         "cut": "Colour & Cut & Blow-Dry",
-        "price": "85+"
+        "price": "95+"
       },
       {
         "cut": "Full Highlights",
-        "price": "100+"
+        "price": "120+"
       },
       {
         "cut": "Partial Highlights",
-        "price": "75+"
+        "price": "80+"
       },
       {
         "cut": "Men’s Colour",
@@ -77,7 +81,7 @@
       },
       {
         "cut": "Ombré/Balayage",
-        "price": "100+"
+        "price": "120+"
       },
       {
         "cut": "Hair Treatments",

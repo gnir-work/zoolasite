@@ -2,6 +2,8 @@
 //Prices controller
 angular.module('prices').
     controller('pricesController', function($scope, resourceService){
-
-        this.cuts = resourceService.loaded.prices;
+        var controller = this;
+        resourceService.getPageData(function(pageData){
+            controller.cuts = pageData.prices;
+        });
 });
