@@ -1,0 +1,187 @@
+.app-container{
+    background-color:#EDEDED;
+}
+
+.prices-header{
+    margin: auto;
+    margin-top:25px;
+    text-align: center;
+    width: 60vw;
+}
+
+.fancy-heading{
+    position: relative;
+    display: inline;
+    color: black;
+    /*text-shadow: 0.5px 0.5px darkred;*/
+    font-family: 'Ewert', cursive;
+
+}
+
+.fancy-heading::before,
+.fancy-heading::after {
+    content: "";
+    position: absolute;
+    height: 10px;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    top: 0.5em;
+    width: 12.5vw;
+}
+
+.fancy-heading:before {
+    right: 100%;
+    margin-right: 20px;
+}
+.fancy-heading:after {
+    left: 100%;
+    margin-left: 20px;
+}
+
+.prices-header p{
+    margin-top: 10px;
+    color: black;
+    font-size: 1.2em;
+    font-family: 'Casual';
+}
+
+.prices-header p a{
+    text-decoration: none;
+    color: darkred;
+    font-size: 1.3em;
+    font-weight: 600;
+    padding-left: 3px;
+    padding-right: 6px;
+}
+
+.prices-header img{
+    margin-top: 12px;
+    border-radius: 20%;
+}
+
+.prices-content{
+    text-align: center;
+    margin: auto;
+    width: 70vw;
+}
+
+.prices-table{
+    width: 60vw;
+    margin: auto;
+    margin-top:30px;
+    margin-bottom: 40px;
+    font-family: 'Lobster' !important;
+    color:black;
+    font-size: 2em;
+}
+
+.prices-table td {
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    max-width:200px;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.prices-table th{
+    color: #1C1F24;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.price-cell{
+    padding-left: 10px;
+    width: 1px;
+    text-align: right;
+}
+
+.prices-table td:first-child{
+    text-align: left;
+}
+
+.prices-table td:first-child:after {
+    margin-left: 5px;
+    content:"............................................................................................................................................................. "
+}
+
+tr > td{
+    padding-bottom: 10px;
+}
+
+@media (max-width: 1200px){
+    .prices-table, .prices-header{
+      width: 70vw;
+    }
+
+    .prices-table{
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 1000px){
+    .prices-header, .prices-table{
+        width: 75vw;
+    }
+
+    .prices-table{
+        font-size: 1.5em;
+    }
+
+    .prices-header img{
+        height: 25vh;
+    }
+
+
+}
+
+
+@media (max-width: 780px){
+    .prices-header, .prices-table{
+        width: 90vw;
+    }
+
+    .prices-table{
+        font-size: 1.5em;
+    }
+
+    .prices-header img{
+        margin-bottom: 10px;
+        display: none;
+    }
+
+    .prices-table .firstHeading{
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 600px) {
+    .prices-table{
+        font-size: 1.3em;
+    }
+
+
+}
+
+@media (max-width: 550px){
+    .fancy-heading::before,
+    .fancy-heading::after{
+        width: 8vw;
+    }
+
+    .prices-table{
+        font-size: 1.2em;
+    }
+
+}
+
+@media (max-width: 480px){
+    .fancy-heading::before,
+    .fancy-heading::after{
+        display: none;
+    }
+
+    .prices-table{
+        font-size: 1.1em;
+        font-weight: bolder;
+    }
+
+}
